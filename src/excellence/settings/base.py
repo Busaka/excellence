@@ -77,6 +77,7 @@ INSTALLED_APPS = (
 
     'profiles',
     'accounts',
+    'high_schools',
 
 )
 
@@ -120,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = join(BASE_DIR, 'static_root')
 
 ALLOWED_HOSTS = []
 

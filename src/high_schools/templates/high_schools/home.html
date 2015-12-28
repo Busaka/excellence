@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<p><h1>High Schools</h1></p>
+{% for school in files %}
+<a href="">
+    <p>
+    {{ school.school_name }}
+    </p>
+</a>
+{% endfor %}
+{% endblock %}
