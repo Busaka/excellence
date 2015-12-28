@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 import profiles.urls
 import accounts.urls
 import high_schools.urls
+import contact.urls
 from . import views
 
 urlpatterns = [
@@ -14,6 +15,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include(accounts.urls, namespace='accounts')),
     url(r'^high_schools', include(high_schools.urls, namespace='high_schools')),
+    url(r'^contact', include(contact.urls, namespace='contact')),
 ]
 
 # User-uploaded files like profile pics need to be served in development

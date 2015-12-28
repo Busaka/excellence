@@ -60,6 +60,12 @@ SECRET_KEY = env('SECRET_KEY')
 
 ALLOWED_HOSTS = []
 
+#Sending email
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'lxbusaka07@gmail.com'
+EMAIL_HOST_PASSWORD = 'majestic12jeff'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 # Application definition
 
 INSTALLED_APPS = (
@@ -77,7 +83,8 @@ INSTALLED_APPS = (
 
     'profiles',
     'accounts',
-    'high_schools',
+    'high_schools.apps.HighSchoolsConfig',
+    'contact.apps.ContactConfig',
 
 )
 

@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form method="post" action="">{% csrf_token %}
+            {{ form | crispy }}
+            <p><button class="btn btn-primary" type="submit" role="button">Submit</button></p>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
