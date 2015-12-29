@@ -86,6 +86,7 @@ INSTALLED_APPS = (
     'high_schools.apps.HighSchoolsConfig',
     'contact.apps.ContactConfig',
     'jobs.apps.JobsConfig',
+    'magazine.apps.MagazineConfig',
 
 )
 
