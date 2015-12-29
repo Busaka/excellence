@@ -5,9 +5,24 @@
 {% block content %}
 
 
+<div class="text-center">
     <h3>Local Universities:</h3>
-    {% for university in universities %}
-        {{ university.university_name }}
-    {% endfor %}
+</div>
+
+    <div class="container">
+        <div class="nav nav-sidebar">
+            <div class="row">
+                <div class="col-md-3">
+                    {% for university in universities %}
+                    <a class="list-group-item"  href="#">
+                        <p>
+                        {{ university.university_name }}
+                        </p>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

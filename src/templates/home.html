@@ -108,14 +108,14 @@
     	</div><!-- /.col-->
     </div><!--/.jumbotron-->
   
-        <div class="col-xs-6 col-sm-5 col-md-5 " id="sidebar">
+        <div class="col-xs-12 col-sm-5 col-md-5 " id="sidebar">
           <div class="list-group">
-              {% for name in files %}
+              {% for school in schools %}
             <a href="#" class="list-group-item">
-            <h4 class="list-group-item-heading">{{ name.school_name }}</h4>
+            <h4 class="list-group-item-heading">{{ school.school_name }}</h4>
             <p class="list-group-item-text">
-            <img class="img" src="{{ name.school_photo.url }}" height=50 width=50 alt="20x20">
-            {{ name.description }}
+            <img class="img" src="{{ school.high_school_photo.url }}" height=50 width=50 alt="20x20">
+            {{ school.description }}
             </p></a>
             {% endfor %}
             

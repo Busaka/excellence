@@ -1,12 +1,19 @@
 body{
 	/* background-color:#7FAB8E; */
-	background-color:#739E6E;
+	background-color: #50BF43;
 	padding-top:20px;
     color: #fff;
 }
+
+.btn-primary {
+    color: #fff;
+    background-color: #0FA946;
+    border-color: #0FA946;
+}
+
 .well{
 	/* background-color:#A6C1A7; */
-	background-color:#67496B;
+	background-color:#739E6E;
     padding: 1px;
 }
 
@@ -16,7 +23,7 @@ body{
 }
 .list-group-item{
 	/* background-color:#A6C1A7; */
-	background-color:#67496B;
+	background-color:#739E6E;
 }
 .navbar-inverse {
     background-color: #532571;

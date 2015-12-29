@@ -5,23 +5,25 @@
 
 {% block content %}
 
-<div id="sec3">
-  <div class="container">
-    <div class="row">
-        <div id="address" class="col-md-4">
-          <h2>Our Location</h2>
-          <address>
-            <strong>Excellence Solutions Ltd.</strong><br>
-            Taj Mahal<br>
-            Agra<br>
-            Uttar Pradesh<br>
-            India - 282001<br>
-            <abbr>P:</abbr> +91 0562 222 6431
-          </address>
+<div class="col-md-offset-4">
+    <div id="sec3">
+        <div class="container">
+            <div class="row">
+                <div id="address" class="col-md-4">
+                    <div class="text-center">
+                        <h2>Our Location</h2>
+                        <address>
+                            <strong>Excellence Student Magazine Ltd.</strong><br>
+                            Green Span Mall, 2nd Floor.<br>
+                            0726468536<br>
+                            <abbr><strong>Email:</strong></abbr> phanuel@excellencestudentmagazine.com
+                        </address>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 </div>
 
 <div class="text-center">
@@ -31,7 +33,7 @@
     <div class="col-sm-6 col-sm-offset-3">
         <form method="post" action="">{% csrf_token %}
             {{ form | crispy }}
-            <p><button class="btn btn-primary" type="submit" role="button">Submit</button></p>
+            <p><button class="btn btn-primary btn-block" type="submit" role="button"><strong>Send</strong></button></p>
 
         </form>
     </div>
