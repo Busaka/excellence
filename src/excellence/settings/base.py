@@ -85,6 +85,7 @@ INSTALLED_APPS = (
     'accounts',
     'high_schools.apps.HighSchoolsConfig',
     'contact.apps.ContactConfig',
+    'jobs.apps.JobsConfig',
 
 )
 
