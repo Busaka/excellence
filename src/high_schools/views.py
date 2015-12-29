@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import School
+from .models import HighSchool
 
 # Create your views here.
 
@@ -9,7 +9,7 @@ def home(request):
     :returns: TODO
 
     """
-    files = School.objects.all()
+    files = HighSchool.objects.all()
     # for f in files:
     # print(f)
 

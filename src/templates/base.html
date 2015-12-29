@@ -57,7 +57,8 @@
                   <ul class="dropdown-menu">
                       <li><a href="{% url 'magazine:home' %}">Magazine</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="{% url 'colleges:home' %}">Colleges</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Downloads</a></li>
                   </ul>
                 </li>
                 <li><a href="{% url 'jobs:home' %}">Jobs</a></li>
@@ -69,8 +70,8 @@
                     <li><a href="{% url 'colleges:home' %}">Colleges</a></li>
                     <li role="separator" class="divider"></li>
                     <li class="dropdown-header"><strong>Universities</strong></li>
-                    <li><a href="{% url 'universities:home' %}">Local Universities</a></li>
-                    <li><a href="#">International Universities</a></li>
+                    <li><a href="{% url 'universities:local_universities' %}">Local Universities</a></li>
+                    <li><a href="{% url 'universities:international_universities' %}">International Universities</a></li>
                   </ul>
                 </li>
                     <li><a href="{% url 'contact:home' %}">Contact</a></li>

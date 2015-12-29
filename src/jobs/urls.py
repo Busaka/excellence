@@ -22,4 +22,5 @@ from jobs import views
 
 urlpatterns = [
     url(r'^$', views.jobs, name='home'),
+    url(r'^post_job/', views.post_job, name='post_job'),
 ]

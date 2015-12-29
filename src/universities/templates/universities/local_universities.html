@@ -5,11 +5,9 @@
 {% block content %}
 
 
-    <h3>Colleges:</h3>
-
-    {% for college in colleges %}
-        {{ college.college_name  }}
+    <h3>Local Universities:</h3>
+    {% for university in universities %}
+        {{ university.university_name }}
     {% endfor %}
-
 
 {% endblock %}

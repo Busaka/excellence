@@ -18,12 +18,12 @@ urlpatterns = [
     url(r'^users/', include(profiles.urls, namespace='profiles')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include(accounts.urls, namespace='accounts')),
-    url(r'^high_schools', include(high_schools.urls, namespace='high_schools')),
-    url(r'^contact', include(contact.urls, namespace='contact')),
-    url(r'^jobs', include(jobs.urls, namespace='jobs')),
-    url(r'^magazine', include(magazine.urls, namespace='magazine')),
-    url(r'^colleges', include(colleges.urls, namespace='colleges')),
-    url(r'^universities', include(universities.urls, namespace='universities')),
+    url(r'^high_schools/', include(high_schools.urls, namespace='high_schools')),
+    url(r'^contact/', include(contact.urls, namespace='contact')),
+    url(r'^jobs/', include(jobs.urls, namespace='jobs')),
+    url(r'^magazine/', include(magazine.urls, namespace='magazine')),
+    url(r'^colleges/', include(colleges.urls, namespace='colleges')),
+    url(r'^universities/', include(universities.urls, namespace='universities')),
 ]
 
 # User-uploaded files like profile pics need to be served in development
