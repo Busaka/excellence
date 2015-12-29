@@ -8,6 +8,7 @@ import high_schools.urls
 import contact.urls
 import jobs.urls
 import magazine.urls
+import colleges.urls
 from . import views
 
 urlpatterns = [
@@ -20,6 +21,7 @@ urlpatterns = [
     url(r'^contact', include(contact.urls, namespace='contact')),
     url(r'^jobs', include(jobs.urls, namespace='jobs')),
     url(r'^magazine', include(magazine.urls, namespace='magazine')),
+    url(r'^colleges', include(colleges.urls, namespace='colleges')),
 ]
 
 # User-uploaded files like profile pics need to be served in development
