@@ -7,20 +7,20 @@
 
 
 <div class="text-center">
-    <h3>Local Universities:</h3>
+    <h3>{{ local_university_details }}</h3>
 </div>
+
 
     <div class="container">
         <div class="nav nav-sidebar">
             <div class="row">
-                <div class="col-md-3">
-                    {% for local_university in local_universities %}
-<a class="list-group-item"  href="{% url 'universities:local_uni__details' local_university.id %}">
+                <div class="col-md-3 col-md-offset-4 text-center">
                         <p>
-                        {{ local_university.university_name }}
+            <img class="img" src="{{ local_university_details.university_photo.url }}" height=50 width=50 alt="20x20">
+            <p>
+            {{ local_university_details.description }}
+            </p>
                         </p>
-                    </a>
-                    {% endfor %}
                 </div>
             </div>
         </div>

@@ -1,15 +1,29 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% load crispy_forms_tags %}
+{% block title %}{{ block.super }}International Universities Details{% endblock %}
 
 {% block content %}
 
 
-    <h3>International Universities:</h3>
+<div class="text-center">
+    <h3>International Universities Details:</h3>
+</div>
 
-    {% for university in universities %}
-        {{ university.university_name }}
-    {% endfor %}
-
+    <div class="container">
+        <div class="nav nav-sidebar">
+            <div class="row">
+                <div class="col-md-3">
+                    {% for intern_university in intern_universities %}
+<a class="list-group-item"  href="{% url 'universities:international_uni_details' intern_university.id %}">
+                        <p>
+                        {{ intern_university.university_name }}
+                        </p>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

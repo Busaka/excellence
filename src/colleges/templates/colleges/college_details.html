@@ -1,26 +1,26 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% load crispy_forms_tags %}
-{% block title %}{{ block.super }}Colleges{% endblock %}
+{% block title %}{{ block.super }}College Details{% endblock %}
 
 {% block content %}
 
 
 <div class="text-center">
-    <h3>Colleges:</h3>
+    <h3>{{ college_details }}</h3>
 </div>
+
 
     <div class="container">
         <div class="nav nav-sidebar">
             <div class="row">
-                <div class="col-md-3">
-                    {% for college in colleges %}
-<a class="list-group-item"  href="{% url 'colleges:college_details' college.id %}">
+                <div class="col-md-3 col-md-offset-4 text-center">
                         <p>
-                        {{ college.college_name }}
+            <img class="img" src="{{ college_details.college_photo.url }}" height=50 width=50 alt="20x20">
+            <p>
+            {{ college_details.description }}
+            </p>
                         </p>
-                    </a>
-                    {% endfor %}
                 </div>
             </div>
         </div>

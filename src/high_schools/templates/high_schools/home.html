@@ -1,13 +1,29 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block title %}{{ block.super }}High Schools{% endblock %}
 
 {% block content %}
-<p><h1>High Schools</h1></p>
-{% for school in files %}
-<a href="">
-    <p>
-    {{ school.high_school_name }}
-    </p>
-</a>
-{% endfor %}
+
+
+<div class="text-center">
+    <h3>High Schools:</h3>
+</div>
+
+    <div class="container">
+        <div class="nav nav-sidebar">
+            <div class="row">
+                <div class="col-md-3">
+                    {% for school in schools %}
+<a class="list-group-item"  href="{% url 'high_schools:high_school_details' school.id %}">
+                        <p>
+                        {{ school.high_school_name }}
+                        </p>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

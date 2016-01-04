@@ -21,4 +21,6 @@ from high_schools import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'(?P<uni_id>\d+)$', views.high_school_details, name='high_school_details'),
 ]
+

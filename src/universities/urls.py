@@ -22,6 +22,8 @@ from universities import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'international_universities$', views.international_universities, name='international_universities'),
     url(r'local_universities$', views.local_universities, name='local_universities'),
+    url(r'(?P<uni_id>\d+)/local_uni_details/$', views.local_university_details, name='local_uni__details'),
+    url(r'international_universities$', views.international_universities, name='international_universities'),
+    url(r'(?P<uni_id>\d+)/international_uni_details/$', views.international_uni_details, name='international_uni_details'),
 ]

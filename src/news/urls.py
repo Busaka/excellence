@@ -15,9 +15,9 @@ Including another URLconf
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import url
-from colleges import views
+from news import views
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
-    url(r'(?P<uni_id>\d+)$', views.college_details, name='college_details'),
+    url(r'^$', views.News.as_view(), name='home'),
 ]
+

@@ -8,6 +8,7 @@ import high_schools.urls
 import contact.urls
 import jobs.urls
 import magazine.urls
+import news.urls
 import colleges.urls
 import universities.urls
 from . import views
@@ -22,6 +23,7 @@ urlpatterns = [
     url(r'^contact/', include(contact.urls, namespace='contact')),
     url(r'^jobs/', include(jobs.urls, namespace='jobs')),
     url(r'^magazine/', include(magazine.urls, namespace='magazine')),
+    url(r'^news/', include(news.urls, namespace='news')),
     url(r'^colleges/', include(colleges.urls, namespace='colleges')),
     url(r'^universities/', include(universities.urls, namespace='universities')),
 ]
