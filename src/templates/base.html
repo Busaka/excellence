@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load compile_static %}
 {% load staticfiles %}
 {% load thumbnail %}
-    
+  
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,20 +14,15 @@
 
     <title>{% block title %}{% include "_brandname.html" %} | {% endblock %}</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'bootstrap/css/offcanvas.css' %}" rel="stylesheet">
-    <link href="{% static 'bootstrap/css/theme.css' %}" rel="stylesheet">
-
-    <!-- Custom styles for this site -->
-    {% block styles %}
-    <link href="{% static 'site/css/main.css' %}" rel="stylesheet">
-    <link href="{% static 'site/css/custom.css' %}" rel="stylesheet">
-    {% endblock styles %}
-
     <!-- Custom tags for the head tag -->
-    {% block extrahead %}{% endblock extrahead %}
 
+<link rel="stylesheet" href="{% static 'bootstrap/css/less/bootstrap.less'|compile %}" />
+<link rel="stylesheet" href="{% static 'site/css/less/main.less'|compile %}" />
+<link rel="stylesheet" href="{% static 'site/css/less/custom_carousel.less'|compile %}" />
+<link rel="stylesheet" href="{% static 'site/css/less/carousel_fade.less'|compile %}" />
+<link rel="stylesheet" href="{% static 'site/css/less/custom.less'|compile %}" />
+
+    {% block extrahead %}{% endblock extrahead %}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -35,7 +31,59 @@
   </head>
 
   <body>
+<!-- ========================================================================================================== -->
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-4">
+          <img class="img" src="{% static 'site/img/esm_logo-01.png' %}" height=140px width=350px alt="logo1">
+              </div>
 
+     <!-- ========================================================================================================== -->
+
+ <div class="col-md-4">
+
+<div id="carousel-2" class="carousel carousel1 slide carousel-fade" data-ride="carousel">
+    <!-- Carousel items -->
+    <div class="carousel-inner carousel-inner1">
+        <div class="active item item1">
+            <img class="first-slide" src="{% static 'site/img/logo1.png' %}" height=140px width=350px alt="logo1">
+        </div>
+        <div class="item item1">
+            <img class="second-slide" src="{% static 'site/img/local_university.jpg' %}" height=140px width=350px alt="logo1">
+        </div>
+        <div class="item item1">
+            <img class="third-slide" src="{% static 'site/img/logo1.png' %}" height=140px width=350px alt="logo1">
+        </div>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#carousel-2" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#carousel-2" data-slide="next">&rsaquo;</a>
+</div>
+</div>
+<!-- ================================================================================================================== -->
+ <div class="col-md-4">
+
+<div id="carousel-2" class="carousel carousel1 slide carousel-fade" data-ride="carousel">
+    <!-- Carousel items -->
+    <div class="carousel-inner carousel-inner1">
+        <div class="active item item1">
+            <img class="first-slide" src="{% static 'site/img/logo1.png' %}" height=140px width=350px alt="logo1">
+        </div>
+        <div class="item item1">
+            <img class="second-slide" src="{% static 'site/img/local_university.jpg' %}" height=140px width=350px alt="logo1">
+        </div>
+        <div class="item item1">
+            <img class="third-slide" src="{% static 'site/img/logo1.png' %}" height=140px width=350px alt="logo1">
+        </div>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#carousel-2" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#carousel-2" data-slide="next">&rsaquo;</a>
+</div>
+</div>
+          
+      </div>
+<!-- ================================================================================================================ -->
     {% block navbar %}
    <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
@@ -46,7 +94,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="{% url 'home' %}">Excellence</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -54,15 +101,6 @@
                   <li><a href="{% url 'about' %}">About us</a></li>
                   <li><a href="{% url 'magazine:home' %}">Magazine</a></li>
                   <li><a href="{% url 'news:home' %}">News</a></li>
-                <!-- <li class="dropdown"> -->
-                <!--   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events <span class="caret"></span></a> -->
-                <!--   <ul class="dropdown-menu"> -->
-                <!--       <li><a href="{% url 'magazine:home' %}">Magazine</a></li> -->
-                <!--     <li role="separator" class="divider"></li> -->
-                <!--     <li><a href="#">News</a></li> -->
-                <!--     <li><a href="#">Downloads</a></li> -->
-                <!--   </ul> -->
-                <!-- </li> -->
                 <li><a href="{% url 'jobs:home' %}">Jobs</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Institutions <span class="caret"></span></a>
@@ -84,6 +122,7 @@
         </nav>
     {% endblock navbar %}
 
+    <!-- ============================================================================================================ -->
     {% block messages %}
       {% if messages %}
         {% for message in messages %}
@@ -101,27 +140,32 @@
         {% endblock container %}
     {% endblock content %}
 
+    <!-- ============================================================================================================== -->
     <!-- Site footer -->
     {% block footer %}
     <div class="col-md-offset-5">
       <footer>
-        <p>&copy; 2015 Company, Inc.</p>
+        <p>&copy; 2015 Excellence Student Magazine Ltd.</p>
       </footer>
     </div>
     {% endblock %}
 
+<!-- ============================================================================================================== -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
     <script>window.jQuery || document.write('<script src="{% static 'bootstrap/js/jquery.min.js' %}"><\/script>')</script>
 
+    <script src="{% static 'site/js/carousel_fade.js' %}"></script>
     <!-- <script src="../../dist/js/bootstrap.min.js"></script> -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
     
-    <script src="{% static 'bootstrap/js/offcanvas.js' %}"></script>
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
     <!-- <script src="offcanvas.js"></script> -->
     {% block scripts %}

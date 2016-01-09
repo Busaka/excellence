@@ -1,5 +1,5 @@
 # In production set the environment variable like this:
-#    DJANGO_SETTINGS_MODULE=excellence.settings.production
+# DJANGO_SETTINGS_MODULE=excellence.settings.production
 from .base import *             # NOQA
 import logging.config
 
@@ -8,8 +8,9 @@ DEBUG = False
 TEMPLATE_DEBUG = False
 
 # Must mention ALLOWED_HOSTS in production!
-# ALLOWED_HOSTS = ["excellence.com"]
+ALLOWED_HOSTS = ["lxbusaka.webfactional.com"]
 
+DATABASE_URL=postgres://lxbusaka:majestic12jeff@lxbusaka.webfactional.com:5432/excellence_db
 # Cache the templates in memory for speed-up
 loaders = [
     ('django.template.loaders.cached.Loader', [

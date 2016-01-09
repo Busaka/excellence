@@ -1,0 +1,171 @@
+// Color variables (appears count calculates by raw css)
+@color0: #eeeeee; // Appears 3 times
+@color1: #dddddd; // Appears 3 times
+@color2: #ea1717; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@width0: 330px; // Appears 2 times
+
+// Height variables (appears count calculates by raw css)
+@height2: 100%; // Appears 3 times
+
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"; 
+
+html {
+	height:@height2;
+}
+	
+body {
+	height:@height2;
+}
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+.footer {
+	border-top: 1px solid @color0;
+	margin-top: 40px;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.alert {
+	margin-bottom: 0;
+	margin-top: 55px;
+}
+body>.navbar-transparent {
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: none;
+}
+.navbar-transparent {
+	.navbar-nav>.active>a {
+		background-color: transparent;
+	}
+}
+.navbar-form {
+	margin-right: 0;
+}
+.navbar-nav>li>a.profile-menu {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.navbar-nav>.btn {
+	margin-right: 1.7em;
+	margin-top:10px;
+}
+.navbar-nav>li>a {
+	font-size: 16px;
+}
+.navbar-brand {
+	font-weight: bold;
+}
+.navbar-brand>img {
+	float: left;
+	margin-right: 10px;
+}
+.btn {
+	-moz-box-shadow: 0px 1px 0px @color1;
+	-webkit-box-shadow: 0px 1px 0px @color1;
+	background-image: none;
+	box-shadow: 0px 1px 0px @color1;
+}
+.corporate-jumbo {
+	-webkit-background-size: cover;
+	background-attachment: fixed;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("/static/site/img/banner.jpg");
+	background-position: 80% center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #f5f5f5;
+	height: @height2;
+	margin-bottom: 0;
+	padding: 10em 0;
+	.well {
+		background-color: rgba(245, 245, 245, .7);
+		legend {
+			color: #333333;
+		}
+	}
+	p {
+		color: @color0;
+		font-weight: 500;
+		text-shadow: 0px 0px 2px black;
+	}
+	h1 {
+		color: @color0;
+		text-shadow: 0px 0px 2px black;
+	}
+}
+.corporate-jumbo>.container {
+	bottom: 2em;
+	display: block;
+	left: 15px;
+	position: absolute;
+}
+.contact-banner {
+	background: #e0e0e0;
+	margin-top: 100px;
+	padding: 100px 0;
+}
+#sec1 {
+	background:url(data:image/png;
+	base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQIW2NkAIILFy78NzAwYATRjCABZEGwAEwFiA1WBlIOUwkA72gTdDIYVO4AAAAASUVORK5CYII=) repeat;
+}
+.profile-head {
+	background:url(data:image/png;
+	base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQIW2NkAIILFy78NzAwYATRjCABZEGwAEwFiA1WBlIOUwkA72gTdDIYVO4AAAAASUVORK5CYII=) repeat;
+	padding: 70px 0px 30px 20px;
+}
+.profile-body {
+	padding: 4px 0px;
+}
+.text-page {
+	padding: 120px 0;
+}
+#map-outer {
+	background-color:#ffffff;
+	height: 440px;
+	margin-bottom: 20px;
+	padding: 40px 20px;
+}
+#map-container {
+	height: 400px;
+}
+.img-dim {
+	box-shadow: inset 0px 0px 64px 64px @color2, 0px 0px 4px 4px @color2;
+	opacity: 0.5;
+}
+.form-box {
+	form {
+		margin: 0 auto;
+		max-width: @width0;
+		padding: 15px;
+		.checkbox {
+			font-weight: normal;
+			margin-bottom: 10px;
+		}
+		.form-control {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			font-size: 16px;
+			height: auto;
+			padding: 10px;
+			position: relative;
+			&:focus {
+				z-index: 2;
+			}
+		}
+	}
+	.form-message {
+		margin: 0 auto;
+		max-width: @width0;
+		padding: 15px;
+	}
+}
+

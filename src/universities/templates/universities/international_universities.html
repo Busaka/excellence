@@ -7,23 +7,38 @@
 
 
 <div class="text-center">
-    <h3>International Universities Details:</h3>
+    <h3><span class="label label-default">International Universities</span></h3>
 </div>
 
-    <div class="container">
-        <div class="nav nav-sidebar">
-            <div class="row">
-                <div class="col-md-3">
-                    {% for intern_university in intern_universities %}
-<a class="list-group-item"  href="{% url 'universities:international_uni_details' intern_university.id %}">
-                        <p>
-                        {{ intern_university.university_name }}
-                        </p>
-                    </a>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+     <div class="row">
+        <div class="col-xs-12 col-md-12">
+<div class="well">         
+<p>The ESM is a team of specialists that are passionate about establishing local and international partnerships and collaborations for the development and internationalisation of higher education in East Africa through exhibitions, information seminars, conferences and institutional visits.</p>
+</div>           
+          </div><!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+        
+</div> <!-- container-->       
 
+    <div class="container">
+            <div class="row">
+                    {% for intern_university in intern_universities %}
+                <div class="col-md-4">
+                    <p>
+                    <h4>
+                        <span class="label label-default">
+                            {{ intern_university.university_name }}
+                        </span>
+                    </h4>
+                    </p>
+                    <p>
+                    {{ intern_university.description }}
+                    </p>
+                        <p>
+                        <a class="btn btn-default btn-xs" href="{% url 'universities:international_uni_details' intern_university.id %}" role="button">View details »</a>
+                        </p>
+                </div>
+                    {% endfor %}
+    </div>
 {% endblock %}

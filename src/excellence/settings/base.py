@@ -41,6 +41,13 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'static_precompiler.finders.StaticPrecompilerFinder',
+)
+
 # Use 12factor inspired environment variables or from a file
 import environ
 env = environ.Env()
@@ -60,12 +67,6 @@ SECRET_KEY = env('SECRET_KEY')
 
 ALLOWED_HOSTS = []
 
-#Sending email
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'lxbusaka07@gmail.com'
-EMAIL_HOST_PASSWORD = 'majestic12jeff'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
 # Application definition
 
 INSTALLED_APPS = (
@@ -78,6 +79,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'authtools',
+    'static_precompiler',
     'crispy_forms',
     'easy_thumbnails',
 
