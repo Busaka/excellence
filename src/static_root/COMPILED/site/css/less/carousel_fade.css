@@ -1,6 +1,7 @@
 /* Fade transition carousel.*/
 .carousel-fade .carousel-inner .item {
   transition-property: opacity;
+  transition-duration: 4s;
 }
 .carousel-fade .carousel-inner .item,
 .carousel-fade .carousel-inner .active.left,

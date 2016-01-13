@@ -37,6 +37,7 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
             ],
+		
         },
     },
 ]
@@ -76,10 +77,10 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'static_precompiler',
     'django.contrib.staticfiles',
 
     'authtools',
-    'static_precompiler',
     'crispy_forms',
     'easy_thumbnails',
 
@@ -117,6 +118,13 @@ DATABASES = {
     # os.environ
     'default': env.db(),
 }
+
+
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_USE_TLS = env('EMAIL_USE_TLS')
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/

@@ -6,7 +6,9 @@ class HomePage(TemplateView):
     template_name = "home.html"
     def get_context_data(self, **kwargs):
         context = super(HomePage, self).get_context_data(**kwargs)
-        context['schools'] = HighSchool.objects.all()[:4]
+        schools = HighSchool.objects.filter(featured='yes').order_by('?')[:4]
+
+        context['schools'] = schools
         return context
 
 

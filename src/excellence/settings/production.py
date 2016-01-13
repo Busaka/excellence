@@ -8,7 +8,14 @@ DEBUG = False
 TEMPLATE_DEBUG = False
 
 # Must mention ALLOWED_HOSTS in production!
-ALLOWED_HOSTS = ["lxbusaka.webfactional.com"]
+ALLOWED_HOSTS = [
+        "http://www.excellencestudentmagazine.com",
+        "http://excellencesudentmagazine.com",
+        "www.excellencestudentmagazine.com",
+        "excellencestudentmagazine.com",
+        ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 DATABASE_URL=postgres://lxbusaka:majestic12jeff@lxbusaka.webfactional.com:5432/excellence_db
 # Cache the templates in memory for speed-up
@@ -23,7 +30,7 @@ TEMPLATES[0]['OPTIONS'].update({"loaders": loaders})
 TEMPLATES[0].update({"APP_DIRS": False})
 
 # Define STATIC_ROOT for the collectstatic command
-STATIC_ROOT = join(BASE_DIR, '..', 'site', 'static')
+STATIC_ROOT = 
 
 # Log everything to the logs directory at the top
 LOGFILE_ROOT = join(dirname(BASE_DIR), 'logs')

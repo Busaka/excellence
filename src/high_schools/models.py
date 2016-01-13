@@ -5,6 +5,7 @@ from django.db import models
 
 class HighSchool(models.Model):
     """Docstring for Schools. """
+    featured = models.CharField(max_length=200)
     high_school_name = models.CharField(max_length=200)
     description = models.TextField()
     high_school_photo = models.ImageField(upload_to='school_photos')

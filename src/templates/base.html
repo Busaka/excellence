@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
 {% load compile_static %}
 {% load staticfiles %}
 {% load thumbnail %}
+<!DOCTYPE html>
+<html lang="en">
   
   <head>
     <meta charset="utf-8">
@@ -18,7 +18,6 @@
 
 <link rel="stylesheet" href="{% static 'bootstrap/css/less/bootstrap.less'|compile %}" />
 <link rel="stylesheet" href="{% static 'site/css/less/main.less'|compile %}" />
-<link rel="stylesheet" href="{% static 'site/css/less/custom_carousel.less'|compile %}" />
 <link rel="stylesheet" href="{% static 'site/css/less/carousel_fade.less'|compile %}" />
 <link rel="stylesheet" href="{% static 'site/css/less/custom.less'|compile %}" />
 
@@ -34,15 +33,17 @@
 <!-- ========================================================================================================== -->
       <div class="container-fluid">
           <div class="row">
-              <div class="col-md-4">
-          <img class="img" src="{% static 'site/img/esm_logo-01.png' %}" height=140px width=350px alt="logo1">
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                  <a href="{% url 'home' %}">
+                      <img class="img" src="{% static 'site/img/esm_logo-01.png' %}" height=140px width=350px alt="logo1">
+                  </a>
               </div>
 
      <!-- ========================================================================================================== -->
 
- <div class="col-md-4">
+ <div class="col-xs-12 col-sm-4 col-md-4">
 
-<div id="carousel-2" class="carousel carousel1 slide carousel-fade" data-ride="carousel">
+<div id="carousel-1" class="carousel carousel1 slide carousel-fade" data-ride="carousel">
     <!-- Carousel items -->
     <div class="carousel-inner carousel-inner1">
         <div class="active item item1">
@@ -56,12 +57,12 @@
         </div>
     </div>
     <!-- Carousel nav -->
-    <a class="carousel-control left" href="#carousel-2" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#carousel-2" data-slide="next">&rsaquo;</a>
+    <a class="carousel-control left" href="#carousel-1" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#carousel-1" data-slide="next">&rsaquo;</a>
 </div>
 </div>
 <!-- ================================================================================================================== -->
- <div class="col-md-4">
+ <div class="col-xs-12 col-sm-4 col-md-4">
 
 <div id="carousel-2" class="carousel carousel1 slide carousel-fade" data-ride="carousel">
     <!-- Carousel items -->
@@ -136,16 +137,14 @@
 
     
     {% block content %}
-        {% block container %}
-        {% endblock container %}
     {% endblock content %}
 
     <!-- ============================================================================================================== -->
     <!-- Site footer -->
     {% block footer %}
-    <div class="col-md-offset-5">
+    <div class="text-center">
       <footer>
-        <p>&copy; 2015 Excellence Student Magazine Ltd.</p>
+        <p>&copy; 2016 Excellence Student Magazine Ltd.</p>
       </footer>
     </div>
     {% endblock %}

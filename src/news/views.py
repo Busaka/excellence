@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
+from .models import New
 
 # Create your views here.
 
@@ -7,7 +8,7 @@ from django.views.generic.base import TemplateView
 
 class News(TemplateView):
     template_name = "news/news.html"
-    # def get_context_data(self, **kwargs):
-    #     context = super(HomePage, self).get_context_data(**kwargs)
-    #     context['schools'] = HighSchool.objects.all()[:4]
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super(News, self).get_context_data(**kwargs)
+        context['news'] = New.objects.get(pk=1)
+        return context
