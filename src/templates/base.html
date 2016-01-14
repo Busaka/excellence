@@ -115,7 +115,6 @@
                     <li><a href="{% url 'universities:international_universities' %}">International Universities</a></li>
                   </ul>
                 </li>
-                    <li><a href="#">Downloads</a></li>
                     <li><a href="{% url 'contact:home' %}">Contact us</a></li>
               </ul>
             </div>
@@ -144,7 +143,7 @@
     {% block footer %}
     <div class="text-center">
       <footer>
-        <p>&copy; 2016 Excellence Student Magazine Ltd.</p>
+          <p>&copy; {% now 'Y' %} Excellence Student Magazine Ltd.</p>
       </footer>
     </div>
     {% endblock %}

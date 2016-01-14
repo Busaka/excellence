@@ -12,6 +12,12 @@ body {
   background-color: #0FA946;
   border-color: #0FA946;
 }
+
+.p-color {
+  color: #532560;
+  font-size: 120%
+}
+
 .well {
   /* background-color:#A6C1A7; */
   background-color: #739E6E;
