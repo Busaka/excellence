@@ -22,6 +22,8 @@ body {
   /* background-color:#A6C1A7; */
   background-color: #739E6E;
   padding: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .jumbotron {
   /* background-color:#A6C1A7; */
@@ -106,7 +108,7 @@ button.list-group-item {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 700px;
-  height: 377px;
+  height: 380px;
 }
 
 .carousel-inner1 > .item1 > img,
