@@ -9,6 +9,9 @@ def magazine(request):
     """TODO: Docstring for home.
     :returns: TODO
     """
-    articles = Article.objects.get(pk=2)
+    try:
+        articles = Article.objects.get(pk=1)
+    except:
+        articles = Article.objects.all()
     return render(request, 'magazine/magazine.html', {'articles': articles})
 

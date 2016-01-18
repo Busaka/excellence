@@ -5,7 +5,7 @@ from django.db import models
 
 class Contact(models.Model):
 
-    """Docstring for . """
+    """Docstring for Contact. """
     subject = models.CharField(max_length=1000)
     email = models.EmailField()
     message = models.TextField()

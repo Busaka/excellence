@@ -4,10 +4,10 @@ from django.db import models
 
 
 class LocalUniversities(models.Model):
-    """Docstring for Schools. """
+    """Docstring for LocalUniversities. """
     university_name = models.CharField(max_length=200)
     description = models.TextField()
-    university_photo = models.ImageField(upload_to='school_photos')
+    university_photo = models.ImageField(upload_to='university_photos')
     published = models.DateTimeField(auto_now_add=True, auto_now=False)
 
     def __str__(self):
@@ -15,10 +15,10 @@ class LocalUniversities(models.Model):
 
 
 class InternationalUniversities(models.Model):
-    """Docstring for Schools. """
+    """Docstring for InternationalUniversities. """
     university_name = models.CharField(max_length=200)
     description = models.TextField()
-    university_photo = models.ImageField(upload_to='school_photos')
+    university_photo = models.ImageField(upload_to='university_photos')
     published = models.DateTimeField(auto_now_add=True, auto_now=False)
 
     def __str__(self):

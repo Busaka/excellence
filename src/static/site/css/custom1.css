@@ -99,6 +99,7 @@ button.list-group-item {
 .col-xs-7,
 .col-xs-8,
 .col-xs-9 {
+  padding-bottom: 10px;
   padding-right: 3px;
   padding-left: 3px;
 }
@@ -109,6 +110,10 @@ button.list-group-item {
 .row1 {
     margin-right: 0px;
     margin-left: 0px;
+}
+
+.thumbnail1 {
+    margin-bottom: 0px;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {

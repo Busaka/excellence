@@ -5,10 +5,10 @@ from django.db import models
 
 
 class College(models.Model):
-    """Docstring for Schools. """
+    """Docstring for Contact. """
     college_name = models.CharField(max_length=200)
     description = models.TextField()
-    college_photo = models.ImageField(upload_to='school_photos')
+    college_photo = models.ImageField(upload_to='college_photos')
     published = models.DateTimeField(auto_now_add=True, auto_now=False)
 
     def __str__(self):

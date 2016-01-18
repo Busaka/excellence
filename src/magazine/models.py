@@ -17,7 +17,7 @@ class Article(models.Model):
     h1_paragraph_eight = models.TextField(blank=True)
     h1_paragraph_nine = models.TextField(blank=True)
     h1_paragraph_ten = models.TextField(blank=True)
-    image_one = models.ImageField() 
+    image_one = models.ImageField(upload_to='magazine_photos') 
 
     heading_two = models.CharField(max_length=500)
     h2_sub_heading_one = models.CharField(max_length=200, blank=True)
@@ -36,7 +36,7 @@ class Article(models.Model):
     h2_paragraph_ten = models.TextField(blank=True)
     h2_paragraph_eleven = models.TextField(blank=True)
     h2_paragraph_twelve = models.TextField(blank=True)
-    image_two = models.ImageField() 
+    image_two = models.ImageField(upload_to='magazine_photos') 
 
     heading_three = models.CharField(max_length=500)
     h3_sub_heading_one = models.CharField(max_length=200, blank=True)
@@ -55,7 +55,7 @@ class Article(models.Model):
     h3_paragraph_ten = models.TextField(blank=True)
     h3_paragraph_eleven = models.TextField(blank=True)
     h3_paragraph_twelve = models.TextField(blank=True)
-    image_two = models.ImageField() 
+    image_two = models.ImageField(upload_to='magazine_photos') 
 
     heading_four = models.CharField(max_length=500)
     h4_sub_heading_one = models.CharField(max_length=200, blank=True)
@@ -74,7 +74,7 @@ class Article(models.Model):
     h4_paragraph_ten = models.TextField(blank=True)
     h4_paragraph_eleven = models.TextField(blank=True)
     h4_paragraph_twelve = models.TextField(blank=True)
-    image_two = models.ImageField() 
+    image_two = models.ImageField(upload_to='magazine_photos') 
 
     heading_five = models.CharField(max_length=500)
     h5_sub_heading_one = models.CharField(max_length=200, blank=True)
@@ -93,7 +93,7 @@ class Article(models.Model):
     h5_paragraph_ten = models.TextField(blank=True)
     h5_paragraph_eleven = models.TextField(blank=True)
     h5_paragraph_twelve = models.TextField(blank=True)
-    image_two = models.ImageField() 
+    image_two = models.ImageField(upload_to='magazine_photos') 
 
     heading_six = models.CharField(max_length=500)
     h6_sub_heading_one = models.CharField(max_length=200, blank=True)
@@ -112,7 +112,7 @@ class Article(models.Model):
     h6_paragraph_ten = models.TextField(blank=True)
     h6_paragraph_eleven = models.TextField(blank=True)
     h6_paragraph_twelve = models.TextField(blank=True)
-    image_two = models.ImageField() 
+    image_two = models.ImageField(upload_to='magazine_photos') 
     pub_date = models.DateTimeField('Date Published', auto_now_add=True, auto_now=False)
 
     def __str__(self):

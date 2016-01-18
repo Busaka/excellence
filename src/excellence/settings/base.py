@@ -78,7 +78,6 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'static_precompiler',
     'django.contrib.staticfiles',
 
     'authtools',
