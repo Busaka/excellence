@@ -17,10 +17,6 @@ def post_job(request):
     """
     form = JobForm(request.POST or None)
     if form.is_valid():
-        print('THIS IS THE FORM SUBJECT', form.cleaned_data.get('school', ''))
-        print('THIS IS THE FORM SUBJECT', form.cleaned_data.get('subject', ''))
-        print('THIS IS THE FORM SUBJECT', form.cleaned_data.get('email', ''))
-        print('THIS IS THE FORM SUBJECT', form.cleaned_data.get('description', ''))
         form.save()
-    return render(request, 'jobs/jobs.html', {'form': form})
+    return render(request, 'jobs/post_job.html', {'form': form})
 

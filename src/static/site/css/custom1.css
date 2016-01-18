@@ -18,12 +18,12 @@ body {
   font-size: 120%
 }
 
-.well {
-  /* background-color:#A6C1A7; */
+.well1 {
   background-color: #739E6E;
   padding: 1px;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding:10px;
 }
 .jumbotron {
   /* background-color:#A6C1A7; */
@@ -32,6 +32,7 @@ body {
 .list-group-item {
   /* background-color:#A6C1A7; */
   background-color: #739E6E;
+  padding: 2px;
 }
 .navbar-inverse {
   background-color: #532571;
@@ -104,6 +105,10 @@ button.list-group-item {
 .row {
   margin-right: -30px;
   margin-left: -30px;
+}
+.row1 {
+    margin-right: 0px;
+    margin-left: 0px;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {

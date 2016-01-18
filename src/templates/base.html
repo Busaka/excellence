@@ -46,15 +46,14 @@
 <div id="carousel-1" class="carousel carousel1 slide carousel-fade" data-ride="carousel">
     <!-- Carousel items -->
     <div class="carousel-inner carousel-inner1">
+        {% for college in featured_colleges %}
         <div class="active item item1">
-            <img class="second-slide" src="{% static 'site/img/local_university.jpg' %}" height=140px width=350px alt="logo1">
+            <img class="first-slide" src="{% if college.college_photo %} {{ college.college_photo.url }} {% endif %}" height=140px width=350px alt="logo1">
         </div>
         <div class="item item1">
-            <img class="first-slide" src="{% static 'site/img/logo1.png' %}" height=140px width=350px alt="logo1">
+        <img class="second-slide" src="{% if college.college_photo %} {{ college.college_photo.url }} {% endif %}" height=140px width=350px alt="logo1">
         </div>
-        <div class="item item1">
-            <img class="third-slide" src="{% static 'site/img/logo1.png' %}" height=140px width=350px alt="logo1">
-        </div>
+        {% endfor %}
     </div>
     <!-- Carousel nav -->
     <a class="carousel-control left" href="#carousel-1" data-slide="prev">&lsaquo;</a>
@@ -67,15 +66,14 @@
 <div id="carousel-2" class="carousel carousel1 slide carousel-fade" data-ride="carousel">
     <!-- Carousel items -->
     <div class="carousel-inner carousel-inner1">
+        {% for university in featured_universities %}
         <div class="active item item1">
-            <img class="first-slide" src="{% static 'site/img/esm_logo-01.png' %}" height=140px width=350px alt="logo1">
+    <img class="first-slide" src="{% if university.university_photo %} {{ university.university_photo.url }} {% endif %}" height=140px width=350px alt="logo1">
         </div>
         <div class="item item1">
-            <img class="second-slide" src="{% static 'site/img/local_university.jpg' %}" height=140px width=350px alt="logo1">
+    <img class="second-slide" src="{% if university.university_photo %} {{ university.university_photo.url }} {% endif %}" height=140px width=350px alt="logo1">
         </div>
-        <div class="item item1">
-            <img class="third-slide" src="{% static 'site/img/Logo2.png' %}" height=140px width=350px alt="logo1">
-        </div>
+        {% endfor %}
     </div>
     <!-- Carousel nav -->
     <a class="carousel-control left" href="#carousel-2" data-slide="prev">&lsaquo;</a>
@@ -117,6 +115,12 @@
                 </li>
                     <li><a href="{% url 'contact:home' %}">Contact us</a></li>
               </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Enter search term" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Go</button>
+          </form>
             </div>
           </div>
         </nav>

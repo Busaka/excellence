@@ -4,26 +4,125 @@
 {% block title %}{{ block.super }}{{ high_school_details }}{% endblock %}
 
 {% block content %}
-
-
 <div class="text-center">
-    <h2><span class="label label-default">{{ high_school_details }}</span></h2>
+    <h3><span class="label label-default">{{ high_school_details }}</span></h3>
+    {% if high_school_details.high_school_photo1 %}
+    <img class="" src="{{ high_school_details.high_school_logo.url }}" height=100px width=100px alt="20x20">
+    {% endif %}
 </div>
 
+<div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-12 col-md-8">
+            
+            <div class="jumbotron-narrow">
 
-    <div class="container">
-        <div class="nav nav-sidebar">
-            <div class="row">
-                <div class="col-md-3 col-md-offset-4 text-center">
+                <div class="row row1">
                         <p>
-            <img class="img" src="{{ high_school_details.high_school_photo.url }}" height=50 width=50 alt="20x20">
-            <p>
-            {{ high_school_details.description }}
-            </p>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            {% if high_school_details.high_school_photo1 %}
+                            <img class="thumbnail" src="{{ high_school_details.high_school_photo1.url }}" height=200px width=300px alt="20x20">
+                            {% endif %}
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            {% if high_school_details.description1 %}
+                            {{ high_school_details.description1 }}
+                            {% endif %}
+                        </div>
                         </p>
+                        <p>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            {% if high_school_details.high_school_photo2 %}
+                            <img class="thumbnail" src="{{ high_school_details.high_school_photo2.url }}" height=200 width=300 alt="20x20">
+                            {% endif %}
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            {% if high_school_details.description2 %}
+                            {{ high_school_details.description2 }}
+                            {% endif %}
+                        </div>
+                        </p>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        {% if high_school_details.high_school_photo3 %}
+                        <img class="thumbnail" src="{{ high_school_details.high_school_photo3.url }}" height=200 width=300 alt="20x20">
+                        {% endif %}
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        {% if high_school_details.description3 %}
+                        {{ high_school_details.description3 }}
+                        {% endif %}
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        {% if high_school_details.high_school_photo4 %}
+                        <img class="thumbnail" src="{{ high_school_details.high_school_photo4.url }}" height=200 width=300 alt="20x20">
+                        {% endif %}
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <p>
+                        {% if high_school_details.description4 %}
+                        {{ high_school_details.description4 }}
+                        {% endif %}
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        {% if high_school_details.high_school_photo5 %}
+                        <img class="thumbnail" src="{{ high_school_details.high_school_photo5.url }}" height=200 width=300 alt="20x20">
+                        {% endif %}
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        {% if high_school_details.description5 %}
+                        {{ high_school_details.description5 }}
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 " id="sidebar">
 
-{% endblock %}
+            <div class=" well well1">
+                <div class="sidebar-module">
+                    <h3><span class="label label-default">Special courses offered</span></h3>
+                    <ol class="list-unstyled">
+                        <li><a href="#">{{ high_school_details.subject_one }}</a></li>
+                        {% if high_school_details.subject_two %}
+                        <li><a href="#">{{ high_school_details.subject_two }}</a></li>
+                        {% endif %}
+                        {% if high_school_details.subject_three %}
+                        <li><a href="#">{{ high_school_details.subject_three }}</a></li>
+                        {% endif %}
+                        {% if high_school_details.subject_four %}
+                        <li><a href="#">{{ high_school_details.subject_four }}</a></li>
+                        {% endif %}
+                        {% if high_school_details.subject_five %}
+                        <li><a href="#">{{ high_school_details.subject_five }}</a></li>
+                        {% endif %}
+                    </ol>
+                </div>
+                <div class="sidebar-module sidebar-module-inset">
+                    <h3><span class="label label-default">Contact us</span></h3>
+                    <address class="p-color">
+                    {{ high_school_details }} <br />
+                    P.O BOX {{ high_school_details.po_box }}<br />
+                    {{ high_school_details.location }}<br />
+                    {{ high_school_details.phone }}<br />
+                    {{ high_school_details.email }}<br />
+                        {% if high_school_details.website %}
+                    <a href="#">
+                        {{ high_school_details.website }}
+                    </a>
+                    {% endif %}
+                    </address>
+                </div>
+                <div class="sidebar-module">
+                    <h4><span class="label label-default">Find us on</span></h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+{% endblock content %}

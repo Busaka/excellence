@@ -43,7 +43,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="{% static 'site/img/high_schools.JPG' %}" alt="First slide">
+        <img class="first-slide" src="{% static 'site/img/high_schools.JPG' %}" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
                 <h1>High Schools</h1>
@@ -100,7 +100,9 @@
                     <a href="{% url 'high_schools:high_school_details' school.id %}" class="list-group-item">
                         <h4 class="list-group-item-heading"><span class="label label-default">{{ school.high_school_name }}</span></h4>
                         <p class="list-group-item-text">
-                        <img class="img" src="{{ school.high_school_photo.url }}" height=50 width=50 alt="20x20">
+                        {% if school.high_school_photo1 %}
+                        <img class="thumbnail" src="{{ school.high_school_photo1.url }}" height=50 width=50 alt="20x20">
+                        {% endif %}
                         {{ school.description }}
                         </p></a>
                         {% endfor %}
@@ -116,7 +118,7 @@
      <div class="row">
         <div class="col-xs-12 col-md-12">
     <h2><span class="label label-default">About us</span></h2>
-<div class="well">         
+<div class="well well1">         
 <p class="p-color">The ESM is a team of specialists that are passionate about establishing local and international partnerships and collaborations for the development and internationalisation of higher education in East Africa through exhibitions, information seminars, conferences and institutional visits. Our Excellent Student Magazine offers an academically sound literature that enables learners to make informed choices in their academic and career aspirations. Our passion is anchored in our core values; passion, experience and flexibility. Our team comprises diverse and talented individuals whose backgrounds lie in teaching, student counseling and marketing.</p>
 <p><a class="btn btn-primary" href="{% url 'about' %}" role="button">Read more &raquo;</a></p>
 </div>           
