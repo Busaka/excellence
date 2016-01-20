@@ -99,9 +99,14 @@ button.list-group-item {
 .col-xs-7,
 .col-xs-8,
 .col-xs-9 {
-  padding-bottom: 10px;
   padding-right: 3px;
   padding-left: 3px;
+}
+.col-sch {
+    padding-bottom: 10px;
+    padding-right: 0px;
+    margin-left: 18px;
+    margin-right: -80px;
 }
 .row {
   margin-right: -30px;

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block title %}{{ block.super }}Jobs{% endblock %}
+
+{% block content %}
+
+
+<div class="text-center">
+<p><a class="btn btn-primary" href="{% url 'jobs:post_job' %}" role="button">Post a Job Here</a></p>
+    <h3>Available Jobs:</h3>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        {% for job in jobs %}
+        <p>{{ job.job_title }}</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
