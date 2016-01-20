@@ -53,12 +53,12 @@
                 </strong>
             </div>
    <a href="{% url 'colleges:college_details' college.id %}" >
-    <img class="first-slide" src="{% if college.college_photo %} {{ college.college_photo.url }} {% endif %}" height=140px width=350px alt="logo1">
+    <img class="first-slide" src="{% if college.college_photo1 %} {{ college.college_photo1.url }} {% endif %}" height=140px width=350px alt="logo1">
    </a>
         </div>
         <div class="item item1">
    <a href="{% url 'colleges:college_details' college.id %}" >
-   <img class="second-slide" src="{% if college.college_photo %} {{ college.college_photo.url }} {% endif %}" height=140px width=350px alt="logo1">
+   <img class="second-slide" src="{% if college.college_photo1 %} {{ college.college_photo1.url }} {% endif %}" height=140px width=350px alt="logo1">
             <div class="carousel-caption">
                 <strong>
                     {{ college.college_name }}
@@ -82,7 +82,7 @@
         {% for university in featured_universities %}
         <div class="active item item1">
     <a  href="{% url 'universities:local_uni_details' university.id %}" >
-    <img class="first-slide" src="{% if university.university_photo %} {{ university.university_photo.url }} {% endif %}" height=140px width=350px alt="logo1">
+    <img class="first-slide" src="{% if university.university_photo1 %} {{ university.university_photo1.url }} {% endif %}" height=140px width=350px alt="logo1">
             <div class="carousel-caption">
                 <strong>
                     {{ university.university_name }}
@@ -92,7 +92,7 @@
         </div>
         <div class="item item1">
     <a  href="{% url 'universities:local_uni_details' university.id %}" >
-    <img class="second-slide" src="{% if university.university_photo %} {{ university.university_photo.url }} {% endif %}" height=140px width=350px alt="logo1">
+    <img class="second-slide" src="{% if university.university_photo1 %} {{ university.university_photo1.url }} {% endif %}" height=140px width=350px alt="logo1">
             <div class="carousel-caption">
                 <strong>
                     {{ university.university_name }}

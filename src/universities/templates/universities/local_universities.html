@@ -39,10 +39,10 @@ click. From the following list, just click and contact the university via the de
                     </h4>
                     </p>
                     <p>
-                    {{ local_university.description }}
+                    {{ local_university.university_motto }}
                     </p>
                         <p>
-                        <a class="btn btn-default btn-xs" href="{% url 'universities:local_uni__details' local_university.id %}" role="button">View details »</a>
+                        <a class="btn btn-default btn-xs" href="{% url 'universities:local_uni_details' local_university.id %}" role="button">View details »</a>
                         </p>
                 </div>
                     {% endfor %}
