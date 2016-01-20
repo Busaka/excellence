@@ -6,10 +6,35 @@ from django.db import models
 
 class College(models.Model):
     """Docstring for Contact. """
-    college_name = models.CharField(max_length=200)
-    description = models.TextField()
-    college_photo = models.ImageField(upload_to='college_photos')
+    featured = models.CharField(max_length=500)
+    college_name = models.CharField(max_length=500)
+    college_logo = models.ImageField(upload_to='high_school/high_school_photos') 
+    college_motto = models.CharField(max_length=500)
+
+    college_photo1 = models.ImageField(upload_to='high_school/high_school_photos') 
+    description1 = models.TextField(blank=True)
+    college_photo2 = models.ImageField(upload_to='high_school/high_school_photos') 
+    description2 = models.TextField(blank=True)
+    college_photo3 = models.ImageField(upload_to='high_school/high_school_photos') 
+    description3 = models.TextField(blank=True)
+    college_photo4 = models.ImageField(upload_to='high_school/high_school_photos') 
+    description4 = models.TextField(blank=True)
+    college_photo5 = models.ImageField(upload_to='high_school/high_school_photos') 
+    description5 = models.TextField(blank=True)
+
     published = models.DateTimeField(auto_now_add=True, auto_now=False)
+
+    po_box = models.CharField(max_length=500)
+    location = models.CharField(max_length=500)
+    phone = models.CharField(max_length=500)
+    email = models.EmailField()
+    website = models.CharField(max_length=500, blank=True)
+
+    course_one = models.CharField(max_length=500, blank=True)
+    course_two = models.CharField(max_length=500, blank=True)
+    course_three = models.CharField(max_length=500, blank=True)
+    course_four = models.CharField(max_length=500, blank=True)
+    course_five = models.CharField(max_length=500, blank=True)
 
     def __str__(self):
         return self.college_name

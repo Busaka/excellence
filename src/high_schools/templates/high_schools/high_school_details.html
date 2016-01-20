@@ -99,7 +99,9 @@
                 <div class="sidebar-module">
                     <h3><span class="label label-default">Special courses offered</span></h3>
                     <ol class="list-unstyled">
+                        {% if high_school_details.subject_one %}
                         <li><a href="#">{{ high_school_details.subject_one }}</a></li>
+                        {% endif %}
                         {% if high_school_details.subject_two %}
                         <li><a href="#">{{ high_school_details.subject_two }}</a></li>
                         {% endif %}
