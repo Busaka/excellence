@@ -95,7 +95,7 @@
             <div class=" well well1">
                 <div class="sidebar-module">
                     <h3><span class="label label-default">Special courses offered</span></h3>
-                    <ol class="list-unstyled">
+                    <ul>
                         {% if college_details.course_one %}
                         <li><a href="#">{{ college_details.course_one }}</a></li>
                         {% endif %}
@@ -111,9 +111,9 @@
                         {% if college_details.course_five %}
                         <li><a href="#">{{ college_details.course_five }}</a></li>
                         {% endif %}
-                    </ol>
+                    </ul>
                 </div>
-                <div class="sidebar-module sidebar-module-inset">
+                <div class="sidebar-module sidebar-module-inset text-center">
                     <h3><span class="label label-default">Contact us</span></h3>
                     <address class="p-color">
                     {{ college_details }} <br />
@@ -128,7 +128,7 @@
                     {% endif %}
                     </address>
                 </div>
-                <div class="sidebar-module">
+                <div class="sidebar-module text-center">
                     <h4><span class="label label-default">Find us on</span></h4>
                     <ol class="list-unstyled">
                         <li><a href="#">Twitter</a></li>

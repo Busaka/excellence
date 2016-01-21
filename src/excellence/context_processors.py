@@ -1,8 +1,12 @@
 from colleges.models import College
 from universities.models import LocalUniversities
+from universities.models import InternationalUniversities
 
 
 def featured_institutions(request):
-    featured_colleges = College.objects.all().order_by('?')
-    featured_universities = LocalUniversities.objects.all().order_by('?')
-    return {'featured_colleges': featured_colleges, 'featured_universities': featured_universities}
+
+    featured_colleges = College.objects.filter(featured='yes').order_by('?')
+    featured_local_uni = LocalUniversities.objects.filter(featured='yes').order_by('?')
+    featured_inter_uni = InternationalUniversities.objects.filter(featured='yes').order_by('?')
+        
+    return {'featured_colleges': featured_colleges, 'featured_local_uni': featured_local_uni, 'featured_inter_uni': featured_inter_uni}

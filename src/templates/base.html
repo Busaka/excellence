@@ -79,23 +79,23 @@
 <div id="carousel-2" class="carousel carousel1 slide carousel-fade" data-ride="carousel">
     <!-- Carousel items -->
     <div class="carousel-inner carousel-inner1">
-        {% for university in featured_universities %}
+        {% for inter_university in featured_inter_uni %}
         <div class="active item item1">
-    <a  href="{% url 'universities:local_uni_details' university.id %}" >
-    <img class="first-slide" src="{% if university.university_photo1 %} {{ university.university_photo1.url }} {% endif %}" height=140px width=350px alt="logo1">
+    <a  href="{% url 'universities:international_uni_details' inter_university.id %}" >
+    <img class="first-slide" src="{% if inter_university.university_photo1 %} {{ inter_university.university_photo1.url }} {% endif %}" height=140px width=350px alt="logo1">
             <div class="carousel-caption">
                 <strong>
-                    {{ university.university_name }}
+                    {{ inter_university.university_name }}
                 </strong>
             </div>
     </a>
         </div>
         <div class="item item1">
-    <a  href="{% url 'universities:local_uni_details' university.id %}" >
-    <img class="second-slide" src="{% if university.university_photo1 %} {{ university.university_photo1.url }} {% endif %}" height=140px width=350px alt="logo1">
+    <a  href="{% url 'universities:international_uni_details' inter_university.id %}" >
+    <img class="second-slide" src="{% if inter_university.university_photo1 %} {{ inter_university.university_photo1.url }} {% endif %}" height=140px width=350px alt="logo1">
             <div class="carousel-caption">
                 <strong>
-                    {{ university.university_name }}
+                    {{ inter_university.university_name }}
                 </strong>
             </div>
     </a>

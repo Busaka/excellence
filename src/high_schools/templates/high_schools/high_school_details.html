@@ -6,7 +6,7 @@
 {% block content %}
 <div class="text-center">
     <h3><span class="label label-default">{{ high_school_details }}</span></h3>
-    {% if high_school_details.high_school_photo1 %}
+    {% if high_school_details.high_school_logo %}
     <img class="" src="{{ high_school_details.high_school_logo.url }}" height=100px width=100px alt="20x20">
     {% endif %}
 </div>
@@ -17,9 +17,6 @@
       <div class="row row-offcanvas row-offcanvas-right">
 
         <div class="col-xs-12 col-sm-9 well well1">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
           <div class="row">
               <div class="container">
                   <div class="col-xs-12 col-md-5 col-sch">
@@ -38,7 +35,7 @@
               <div class="container">
                   <div class="col-xs-12 col-md-5 col-sch">
                       {% if high_school_details.high_school_photo2 %}
-                      <img class="thumbnail thumbnail1" src="{{ high_school_details.high_school_photo1.url }}" height=200px width=300px alt="20x20">
+                      <img class="thumbnail thumbnail1" src="{{ high_school_details.high_school_photo2.url }}" height=200px width=300px alt="20x20">
                       {% endif %}
                   </div><!--/.col-xs-6.col-lg-4-->
                   <div class="col-xs-12 col-md-5 col-sch">
@@ -98,7 +95,7 @@
             <div class=" well well1">
                 <div class="sidebar-module">
                     <h3><span class="label label-default">Enjoy...</span></h3>
-                    <ol class="list-unstyled">
+                    <ul">
                         {% if high_school_details.subject_one %}
                         <li><a href="#">{{ high_school_details.subject_one }}</a></li>
                         {% endif %}
@@ -114,9 +111,9 @@
                         {% if high_school_details.subject_five %}
                         <li><a href="#">{{ high_school_details.subject_five }}</a></li>
                         {% endif %}
-                    </ol>
+                    </ul>
                 </div>
-                <div class="sidebar-module sidebar-module-inset">
+                <div class="sidebar-module sidebar-module-inset text-center">
                     <h3><span class="label label-default">Contact us</span></h3>
                     <address class="p-color">
                     {{ high_school_details }} <br />
@@ -131,7 +128,7 @@
                     {% endif %}
                     </address>
                 </div>
-                <div class="sidebar-module">
+                <div class="sidebar-module text-center">
                     <h4><span class="label label-default">Find us on</span></h4>
                     <ol class="list-unstyled">
                         <li><a href="#">Twitter</a></li>

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block title %}{{ block.super }}Jobs{% endblock %}
+
+{% block content %}
+
+
+<div class="text-center">
+<p><a class="btn btn-primary" href="{% url 'jobs:post_job' %}" role="button">Post a Job Here</a></p>
+    <h3><span class="label label-default">Job Details:</span></h3>
+</div>
+<div class="row">
+    <div class="list-group">
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4">
+                {% for item in job_details %}
+                    <a class="list-group-item text-center" href="#">
+                        <p>{{ item.school }}</p>
+                        <p>{{ item.email }}</p>
+                        <p>{{ item.phone }}</p>
+                        <p>{{ item.website }}</p>
+                        <p>{{ item.job_description1 }}</p>
+                        <p>{{ item.job_description2 }}</p>
+                        <p>{{ item.job_description3 }}</p>
+                        <p>{{ item.job_description4 }}</p>
+                        <p>{{ item.job_description5 }}</p>
+                        <p>Posted on: {{ item.published }}</p>
+                    </a>
+                {% endfor %}
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+    </div>
+</div>
+
+{% endblock %}

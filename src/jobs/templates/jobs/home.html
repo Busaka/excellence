@@ -8,13 +8,27 @@
 
 <div class="text-center">
 <p><a class="btn btn-primary" href="{% url 'jobs:post_job' %}" role="button">Post a Job Here</a></p>
-    <h3>Available Jobs:</h3>
+    <h3><span class="label label-default">Available Jobs:</span></h3>
 </div>
 <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-        {% for job in jobs %}
-        <p>{{ job.job_title }}</p>
-        {% endfor %}
+    <div class="list-group">
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4">
+                {% for job in jobs %}
+                    {% if job.job_title %}
+                    <a class="list-group-item text-center" href="#">
+                        <p>{{ job.job_title }}</p>
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
     </div>
 </div>
 
