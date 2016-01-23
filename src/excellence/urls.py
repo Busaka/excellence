@@ -6,7 +6,7 @@ import profiles.urls
 import accounts.urls
 import high_schools.urls
 import contact.urls
-import jobs.urls
+import kazi.urls
 import magazine.urls
 import news.urls
 import colleges.urls
@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^', include(accounts.urls, namespace='accounts')),
     url(r'^high_schools/', include(high_schools.urls, namespace='high_schools')),
     url(r'^contact/', include(contact.urls, namespace='contact')),
-    url(r'^jobs/', include(jobs.urls, namespace='jobs')),
+    url(r'^kazi/', include(kazi.urls, namespace='kazi')),
     url(r'^magazine/', include(magazine.urls, namespace='magazine')),
     url(r'^news/', include(news.urls, namespace='news')),
     url(r'^colleges/', include(colleges.urls, namespace='colleges')),

@@ -1,6 +1,3 @@
-
-
-
 """phan URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,10 +15,11 @@ Including another URLconf
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import url
-from jobs import views
+from kazi import views
 
 urlpatterns = [
-    url(r'^$', views.jobs, name='home'),
-    url(r'^post_job/', views.post_job, name='post_job'),
-    url(r'(?P<job_id>\d+)/job_details/$', views.job_details, name='job_details'),
+    url(r'^$', views.kazi, name='home'),
+    url(r'^post_job/', views.post_kazi, name='post_job'),
+    url(r'(?P<job_id>\d+)/job_details/$', views.kazi_details, name='job_details'),
+    url(r'(?P<job_id>\d+)/available_jobs/$', views.available_jobs, name='available_jobs'),
 ]

@@ -7,7 +7,7 @@
 
 
 <div class="text-center">
-<p><a class="btn btn-primary" href="{% url 'jobs:post_job' %}" role="button">Post a Job Here</a></p>
+<p><a class="btn btn-primary" href="{% url 'kazi:post_job' %}" role="button">Post a Job Here</a></p>
     <h3><span class="label label-default">Available Jobs:</span></h3>
 </div>
 <div class="row">
@@ -17,12 +17,12 @@
             </div>
 
             <div class="col-md-4">
-                {% for job in jobs %}
-                    {% if job.job_title %}
-                    <a class="list-group-item text-center" href="#">
-                        <p>{{ job.job_title }}</p>
+                {% for item in job_details %}
+                    <a class="list-group-item text-center" href="{% url 'kazi:job_details' item.id %}">
+                        <p class="p-color"><strong>{{ item.school }}</strong></p>
+                        <p class="p-color"><strong>{{ item.job_title }}</strong></p>
+                        <p><strong>Posted on:</strong> {{ item.published }}</p>
                     </a>
-                    {% endif %}
                 {% endfor %}
             </div>
 

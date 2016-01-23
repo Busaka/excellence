@@ -43,6 +43,14 @@ body {
   margin-bottom: 6px;
   margin-top: 1px;
 }
+.navbar-static-top {
+    margin-left: -15px;
+    margin-right: -36px;
+}
+.collapse.collapse {
+    padding: 0px;
+    width: 975px;
+}
 a.list-group-item .list-group-item-heading,
 button.list-group-item .list-group-item-heading {
   color: #ddd;

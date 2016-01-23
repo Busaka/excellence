@@ -1,10 +1,9 @@
 from django.db import models
 
-
 # Create your models here.
 
 
-class Job(models.Model):
+class Kazi(models.Model):
 
     """Docstring for Job. """
     publish = models.CharField(max_length=20)
@@ -13,7 +12,7 @@ class Job(models.Model):
     phone  = models.CharField(max_length=200, blank=True)
     website  = models.CharField(max_length=200, blank=True)
     job_title = models.CharField(max_length=200)
-    job_description1 = models.TextField('Paragraph One')
+    job_description1 = models.TextField('Job Description')
     job_description2 = models.TextField('Paragraph Two(Optional)', blank=True)
     job_description3 = models.TextField('Paragraph Three(Optional)', blank=True)
     job_description4 = models.TextField('Paragraph Four(Optional)', blank=True)

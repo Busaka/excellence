@@ -88,7 +88,7 @@ INSTALLED_APPS = (
     'accounts',
     'high_schools.apps.HighSchoolsConfig',
     'contact.apps.ContactConfig',
-    'jobs.apps.JobsConfig',
+    'kazi.apps.KaziConfig',
     'magazine.apps.MagazineConfig',
     'news.apps.NewsConfig',
     'colleges.apps.CollegesConfig',

@@ -1,19 +1,15 @@
 from django import forms
-from .models import Job
+from .models import Kazi
 
 
 class JobForm(forms.ModelForm):
 
     """Docstring for . """
     class Meta:
-        model = Job
+        model = Kazi
         fields = [
             'school',
             'email',
             'job_title',
             'job_description1',
-            'job_description2',
-            'job_description3',
-            'job_description4',
-            'job_description5',
             ]
