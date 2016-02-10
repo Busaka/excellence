@@ -7,11 +7,11 @@ from django.db import models
 class College(models.Model):
     """Docstring for Contact. """
     featured = models.CharField(max_length=500)
-    college_name = models.CharField(max_length=500)
+    name = models.CharField(max_length=500)
     college_logo = models.ImageField(upload_to='colleges/college_photos') 
     college_motto = models.CharField(max_length=500)
 
-    college_photo1 = models.ImageField(upload_to='colleges/college_photos') 
+    photo1 = models.ImageField(upload_to='colleges/college_photos') 
     description1 = models.TextField(blank=True)
     college_photo2 = models.ImageField(upload_to='colleges/college_photos') 
     description2 = models.TextField(blank=True)
@@ -35,6 +35,7 @@ class College(models.Model):
     course_three = models.CharField(max_length=500, blank=True)
     course_four = models.CharField(max_length=500, blank=True)
     course_five = models.CharField(max_length=500, blank=True)
+    college_file = models.FileField(upload_to='colleges/college_files', blank=True)
 
     def __str__(self):
         return self.college_name

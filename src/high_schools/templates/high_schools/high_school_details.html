@@ -136,9 +136,11 @@
                     </ol>
                 </div>
             </div>
-            <a href="#">
-                <h4><span class="label label-default">Downloads</span></h4>
-            </a>
+                {% if high_school_details.high_school_file %}
+                <a href="{{ high_school_details.high_school_file.url }}">
+                    <h4><span class="label label-default">Downloads</span></h4>
+                </a>
+                    {% endif %}
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
 

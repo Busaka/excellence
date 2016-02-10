@@ -15,7 +15,7 @@ body {
 
 .p-color {
   color: #532560;
-  font-size: 120%
+  font-size: 100%
 }
 
 .well1 {
@@ -42,6 +42,14 @@ body {
   min-height: 60px;
   margin-bottom: 6px;
   margin-top: 1px;
+}
+.navbar-static-top {
+    margin-left: -15px;
+    margin-right: -36px;
+}
+.collapse.collapse {
+    padding: 0px;
+    width: 1240px;
 }
 a.list-group-item .list-group-item-heading,
 button.list-group-item .list-group-item-heading {
@@ -102,17 +110,51 @@ button.list-group-item {
   padding-right: 3px;
   padding-left: 3px;
 }
+
+
+.col-lg-33,
+.col-lg-44,
+.col-lg-55,
+.col-lg-77,
+.col-lg-66,
+.col-md-33,
+.col-md-44,
+.col-md-55,
+.col-md-77,
+.col-md-66,
+.col-sm-33,
+.col-sm-44,
+.col-sm-55,
+.col-sm-77,
+.col-sm-66,
+.col-xs-33,
+.col-xs-44,
+.col-xs-66,{
+    margin-right: 9px;
+    margin-left: -13px;
+}
+
+.col-sch {
+    padding-bottom: 10px;
+    padding-right: 0px;
+    margin-left: 18px;
+    margin-right: -80px;
+}
 .row {
   margin-right: -30px;
   margin-left: -30px;
 }
 .row1 {
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right: -104px;
+    margin-left: -105px;
+}
+
+.thumbnail1 {
+    margin-bottom: 0px;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  width: 700px;
+  width: 780px;
   height: 380px;
 }
 

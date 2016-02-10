@@ -44,12 +44,12 @@ body {
   margin-top: 1px;
 }
 .navbar-static-top {
-    margin-left: -15px;
-    margin-right: -36px;
+    margin-left: -48px;
+    margin-right: -90px;
 }
 .collapse.collapse {
     padding: 0px;
-    width: 975px;
+    /* width: 1040px; */
 }
 a.list-group-item .list-group-item-heading,
 button.list-group-item .list-group-item-heading {
@@ -110,6 +110,19 @@ button.list-group-item {
   padding-right: 3px;
   padding-left: 3px;
 }
+.paddding1{
+    padding-right: 3px;
+    padding-left: 86px;
+}
+
+.col-margin1{
+    margin-right: -87px;
+    margin-left: 81px;
+}
+.col-margin2{
+    margin-right: -95px;
+    margin-left: 59px;
+}
 .col-sch {
     padding-bottom: 10px;
     padding-right: 0px;
@@ -121,21 +134,32 @@ button.list-group-item {
   margin-left: -30px;
 }
 .row1 {
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right: -78px;
+    margin-left: -64px;
+}
+.row2{
+    /* margin-right: -78px; */
+    margin-left: -3px;
 }
 
+.row3{
+    /* margin-right: -78px; */
+    margin-left: -123px;
+}
+.nav-justified1 {
+    background-color: #532571;
+}
 .thumbnail1 {
     margin-bottom: 0px;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  width: 700px;
+  width: 100%;
   height: 380px;
 }
 
 .carousel-inner1 > .item1 > img,
 .carousel-inner1 > .item1 > a > img {
-  width: 650px;
+  width: 100%;
   height: 140px;
 }

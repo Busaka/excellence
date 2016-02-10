@@ -1,5 +1,6 @@
 from .base import *             # NOQA
 import sys
+import os
 import logging.config
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -13,7 +14,9 @@ if "celery" in sys.argv[0]:
 
 # Django Debug Toolbar
 INSTALLED_APPS += (
-    'debug_toolbar.apps.DebugToolbarConfig',)
+    'debug_toolbar.apps.DebugToolbarConfig',
+    #'haystack',
+    )
 
 # Show emails to console in DEBUG mode
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

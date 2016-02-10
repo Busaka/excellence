@@ -15,11 +15,11 @@ TEMPLATE_DEBUG = False
 #        "excellencestudentmagazine.com",
 #        ]
 
-ALLOWED_HOSTS = ["lxbusaka.webfactional.com"]
-
+ALLOWED_HOSTS = [
+        "*",
+        ]
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-DATABASE_URL=postgres://lxbusaka:majestic12jeff@lxbusaka.webfactional.com:5432/excellence_db
 # Cache the templates in memory for speed-up
 loaders = [
     ('django.template.loaders.cached.Loader', [
@@ -32,8 +32,8 @@ TEMPLATES[0]['OPTIONS'].update({"loaders": loaders})
 TEMPLATES[0].update({"APP_DIRS": False})
 
 # Define STATIC_ROOT for the collectstatic command
-STATIC_ROOT = 
-
+STATIC_ROOT = '/home/lxbusaka/webapps/excellence_static'
+MEDIA_ROOT =  '/home/lxbusaka/webapps/excell_media'
 # Log everything to the logs directory at the top
 LOGFILE_ROOT = join(dirname(BASE_DIR), 'logs')
 

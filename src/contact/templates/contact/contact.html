@@ -33,7 +33,8 @@
 </div>
 <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-        <form method="post" action="">{% csrf_token %}
+        <form role=form  action="" method="post">
+            {% csrf_token %}
             {{ form | crispy }}
             <p><button class="btn btn-primary btn-block" type="submit" role="button"><strong>Send</strong></button></p>
 

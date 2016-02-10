@@ -135,8 +135,12 @@
                         <li><a href="#">Facebook</a></li>
                     </ol>
                 </div>
-                <h4><span class="label label-default">Downloads</span></h4>
             </div>
+                    {% if international_uni_details.university_file %}
+                <a href="{{ international_uni_details.university_file.url }}">
+                    <h4><span class="label label-default">Downloads</span></h4>
+                </a>
+                    {% endif %}
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
 
