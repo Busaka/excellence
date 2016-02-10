@@ -93,6 +93,7 @@ INSTALLED_APPS = (
     'news.apps.NewsConfig',
     'colleges.apps.CollegesConfig',
     'universities.apps.UniversitiesConfig',
+    'excellence_profile.apps.ExcellenceProfileConfig',
 
 )
 
@@ -131,7 +132,7 @@ EMAIL_USE_TLS = env('EMAIL_USE_TLS')
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 

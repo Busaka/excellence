@@ -38,5 +38,5 @@ class College(models.Model):
     college_file = models.FileField(upload_to='colleges/college_files', blank=True)
 
     def __str__(self):
-        return self.college_name
+        return self.name
 

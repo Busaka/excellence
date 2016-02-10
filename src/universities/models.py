@@ -37,7 +37,7 @@ class LocalUniversities(models.Model):
     university_file = models.FileField(upload_to='universities/university_files', blank=True)
 
     def __str__(self):
-        return self.university_name
+        return self.name
 
 
 class InternationalUniversities(models.Model):

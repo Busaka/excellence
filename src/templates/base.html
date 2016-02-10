@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% block description %}{% endblock description %}">
-    <meta name="author" content="Arun Ravindran">
+    <meta name="Excellent Student Magazine" content="Student Magazine">
     <link rel="shortcut icon" href="{% static 'site/img/favicon.ico' %}">
 
     <title>{% block title %}{% include "_brandname.html" %} | {% endblock %}</title>
@@ -79,23 +79,23 @@
              <div id="carousel-1" class="carousel carousel1 slide carousel-fade" data-ride="carousel">
                  <!-- Carousel items -->
                  <div class="carousel-inner carousel-inner1">
-                         {% for name in featured_local_uni %}
+                         {% for local_university in featured_local_uni %}
                      <div class="active item item1">
-                         <a href="{% url 'about' %}" >
-                             <img class="first-slide img" src="{% if name.photo1 %} {{ name.photo1.url }} {% endif %}" height=140px width=250px alt="logo1">
+                         <a href="{% url 'universities:local_uni_details' local_university.id %}" >
+        <img class="first-slide img" src="{% if local_university.photo1 %} {{ local_university.photo1.url }} {% endif %}" height=140px width=250px alt="logo1">
                          <div class="carousel-caption">
                              <strong>
-                                 {{ name.name }}
+                                     {{ local_university.name }}
                              </strong>
                          </div>
                          </a>
                      </div>
                      <div class="item item1">
-                         <a href="{% url 'about' %}" >
-                             <img class="second-slide img" src="{% if name.photo1 %} {{ name.photo1.url }} {% endif %}" height=140px width=250px alt="logo1">
+                         <a href="{% url 'universities:local_uni_details' local_university.id %}" >
+    <img class="second-slide img" src="{% if local_university.photo1 %} {{ local_university.photo1.url }} {% endif %}" height=140px width=250px alt="logo1">
                              <div class="carousel-caption">
                                  <strong>
-                                     {{ name.name }}
+                                     {{ local_university.name }}
                                  </strong>
                              </div>
                          </a>
@@ -159,7 +159,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'about' %}">About us</a></li>
+                    <li><a href="{% url 'excellence_profile:about_us' %}">About us</a></li>
                     <li><a href="{% url 'magazine:home' %}">Magazine</a></li>
                     <li><a href="{% url 'news:home' %}">Events</a></li>
                     <li><a href="{% url 'excellence_jobs:home' %}">Jobs</a></li>
@@ -219,7 +219,7 @@
         <nav>
           <ul class="nav nav-justified nav-justified1">
               <li class="active"><a href="{% url 'home' %}">Home</a></li>
-              <li><a href="{% url 'about' %}">About us</a></li>
+              <li><a href="{% url 'excellence_profile:about_us' %}">About us</a></li>
               <li><a href="{% url 'magazine:home' %}">Magazine</a></li>
               <li><a href="{% url 'news:home' %}">Events</a></li>
               <li><a href="{% url 'excellence_jobs:home' %}">Jobs</a></li>
@@ -227,7 +227,7 @@
           </ul>
         </nav>
       </div>
-          <p>&copy; {% now 'Y' %} Excellent Student Limited  <a href="#">Terms and Conditions</a> <a href="#">Webmaster</a></p>
+      <p><a href="{% url 'excellence_profile:excellence_copyright'%}">&copy; {% now 'Y' %}</a> Excellent Student Limited  <a href="{% url 'excellence_profile:terms_and_conditions'%}">Terms and Conditions</a></p>
       </footer>
     </div>
     {% endblock %}

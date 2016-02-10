@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 
 from .forms import ContactForm
+from .models import Contact
 
 # Create your views here.
 
@@ -30,6 +31,9 @@ def contact(request):
                 headers = {'Reply-To': from_email }
             )
         email.send()
+        contact = Contact.object.create(subject=subject, email=email,
+                message=message)
+        contact.sve()
         messages.success(request, 'Email sent successfully!')
         return HttpResponseRedirect('/')
     context.update(csrf(request))
