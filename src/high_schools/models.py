@@ -33,6 +33,7 @@ class HighSchool(models.Model):
     subject_three = models.CharField(max_length=500, blank=True)
     subject_four = models.CharField(max_length=500, blank=True)
     subject_five = models.CharField(max_length=500, blank=True)
+    high_school_file = models.FileField(upload_to='high_school/high_school_files', blank=True)
 
     def __str__(self):
         return self.high_school_name

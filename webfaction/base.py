@@ -13,10 +13,9 @@ from os.path import dirname, join, exists
 # Build paths inside the project like this: join(BASE_DIR, "directory")
 BASE_DIR = dirname(dirname(dirname(__file__)))
 STATICFILES_DIRS = [join(BASE_DIR, 'static')]
-#MEDIA_ROOT = join(BASE_DIR, 'media')
-MEDIA_ROOT = '/home/lxbusaka/webapps/excell_media'
 MEDIA_URL = "/media/"
 
+MEDIA_ROOT =  '/home/lxbusaka/webapps/excell_media'
 # Use Django templates using the new Django 1.8 TEMPLATES settings
 TEMPLATES = [
     {
@@ -39,16 +38,17 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'excellence.context_processors.featured_institutions',
             ],
+		
         },
     },
 ]
 
-#STATICFILES_FINDERS = (
-#    'django.contrib.staticfiles.finders.FileSystemFinder',
-#    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    # other finders..
-#    'static_precompiler.finders.StaticPrecompilerFinder',
-#)
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    #'static_precompiler.finders.StaticPrecompilerFinder',
+)
 
 # Use 12factor inspired environment variables or from a file
 import environ
@@ -78,32 +78,24 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    #'static_precompiler',
     'django.contrib.staticfiles',
 
     'authtools',
     'crispy_forms',
     'easy_thumbnails',
+    'haystack',
 
     'profiles',
     'accounts',
     'high_schools.apps.HighSchoolsConfig',
     'contact.apps.ContactConfig',
-    'jobs.apps.JobsConfig',
+    'excellence_jobs.apps.ExcellenceJobsConfig',
     'magazine.apps.MagazineConfig',
     'news.apps.NewsConfig',
     'colleges.apps.CollegesConfig',
     'universities.apps.UniversitiesConfig',
 
 )
-
-
-#STATICFILES_FINDERS = (
-#    'django.contrib.staticfiles.finders.FileSystemFinder',
-#    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    # other finders..
-    # 'static_precompiler.finders.StaticPrecompilerFinder',
-#)
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -128,11 +120,15 @@ DATABASES = {
     'default': env.db(),
 }
 
+
 EMAIL_HOST = env('EMAIL_HOST')
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = env('EMAIL_PORT')
 EMAIL_USE_TLS = env('EMAIL_USE_TLS')
+DEFAULT_FROM_EMAIL=env('DEFAULT_FROM_EMAIL')
+SERVER_EMAIL=env('SERVER_EMAIL')
+
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
@@ -150,10 +146,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATIC_ROOT = join(BASE_DIR, 'static_root')
 STATIC_ROOT = '/home/lxbusaka/webapps/excellence_static'
 
-ALLOWED_HOSTS = []
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'xapian_backend.XapianEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'xapian_index')
+    },
+}
 
 # Crispy Form Theme - Bootstrap 3
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -170,4 +171,3 @@ LOGIN_REDIRECT_URL = reverse_lazy("profiles:show_self")
 LOGIN_URL = reverse_lazy("accounts:login")
 
 THUMBNAIL_EXTENSION = 'png'     # Or any extn for your thumbnails
-#/home/lxbusaka/webapps/excellence_static

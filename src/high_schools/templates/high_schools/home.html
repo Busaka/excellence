@@ -13,7 +13,7 @@
      <div class="row">
         <div class="col-xs-12 col-md-12">
 <div class="well well1">         
-<p>
+<p class="text-center">
 Looking to transfer your child from where he is currently schooling or looking for a new school?
 ESM offers a list of high performing schools that meet the excellence standards for success for
 your child. The following list of schools has been verified by our team of counselors and
@@ -38,7 +38,7 @@ that you can use in contacting the schools’ administrators.
                     </h4>
                     </p>
                     <p>
-                    {{ school.description }}
+                    {{ school.high_school_motto }}
                     </p>
                         <p>
                         <a class="btn btn-default btn-xs" href="{% url 'high_schools:high_school_details' school.id %}" role="button">View details »</a>

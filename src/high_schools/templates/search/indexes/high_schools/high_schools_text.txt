@@ -1,0 +1,4 @@
+
+{{ object.high_school_motto }}
+{{ object.high_school_name }}
+{{ object.location }}

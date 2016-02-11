@@ -21,6 +21,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Show thumbnail generation errors
 THUMBNAIL_DEBUG = True
+#MEDIA_ROOT = join(BASE_DIR, 'media')
+#STATIC_ROOT = join(BASE_DIR, 'static_root')
 
 CACHES = {
     'default': {
