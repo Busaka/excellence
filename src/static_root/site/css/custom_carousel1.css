@@ -27,7 +27,7 @@
 .carousel-inner1,
 .carousel-inner1 .item1 {
   /* height: 100%; */
-  width: 350px;
+  width: 250px;
   height: 140px;
 }
 .item:nth-child(1) {

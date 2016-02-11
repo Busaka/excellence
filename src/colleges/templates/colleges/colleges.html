@@ -14,7 +14,7 @@
      <div class="row">
         <div class="col-xs-12 col-md-12">
 <div class="well well1">         
-<p>
+<p class="text-center">
 Getting a good college marks the journey into higher education and the career world. The
 following colleges have a variety of courses that you can choose from at the comfort of your
 home to help you in making your decision concerning your higher education.
@@ -32,12 +32,12 @@ home to help you in making your decision concerning your higher education.
                     <p>
                     <h4>
                         <span class="label label-default">
-                            {{ college.college_name }}
+                            {{ college.name }}
                         </span>
                     </h4>
                     </p>
                     <p>
-                    {{ college.description }}
+                    {{ college.college_motto }}
                     </p>
                         <p>
                         <a class="btn btn-default btn-xs" href="{% url 'colleges:college_details' college.id %}" role="button">View details »</a>
