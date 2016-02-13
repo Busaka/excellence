@@ -5,7 +5,9 @@ from django.db import models
 
 class Job(models.Model):
 
-    """Docstring for Job. """
+    """
+    Docstring for Job. 
+    """
     publish = models.CharField(max_length=20)
     school = models.CharField(max_length=200)
     email = models.EmailField()
