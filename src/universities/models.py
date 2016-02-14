@@ -29,12 +29,23 @@ class LocalUniversities(models.Model):
     email = models.EmailField()
     website = models.CharField(max_length=500, blank=True)
 
+    # special courses
     course_one = models.CharField(max_length=500, blank=True)
+    course1_link = models.CharField(max_length=500, blank=True)
     course_two = models.CharField(max_length=500, blank=True)
+    course2_link = models.CharField(max_length=500, blank=True)
     course_three = models.CharField(max_length=500, blank=True)
+    course3_link = models.CharField(max_length=500, blank=True)
     course_four = models.CharField(max_length=500, blank=True)
+    course4_link = models.CharField(max_length=500, blank=True)
     course_five = models.CharField(max_length=500, blank=True)
+    course5_link = models.CharField(max_length=500, blank=True)
+
     university_file = models.FileField(upload_to='universities/university_files', blank=True)
+
+    # social networks
+    facebook = models.CharField(max_length=500, blank=True)
+    twitter = models.CharField(max_length=500, blank=True)
 
     def __str__(self):
         return self.name
@@ -66,12 +77,23 @@ class InternationalUniversities(models.Model):
     email = models.EmailField()
     website = models.CharField(max_length=500, blank=True)
 
+    # special courses
     course_one = models.CharField(max_length=500, blank=True)
+    course1_link = models.CharField(max_length=500, blank=True)
     course_two = models.CharField(max_length=500, blank=True)
+    course2_link = models.CharField(max_length=500, blank=True)
     course_three = models.CharField(max_length=500, blank=True)
+    course3_link = models.CharField(max_length=500, blank=True)
     course_four = models.CharField(max_length=500, blank=True)
+    course4_link = models.CharField(max_length=500, blank=True)
     course_five = models.CharField(max_length=500, blank=True)
+    course5_link = models.CharField(max_length=500, blank=True)
+
     university_file = models.FileField(upload_to='universities/university_files', blank=True)
+
+    # social networks
+    facebook = models.CharField(max_length=500, blank=True)
+    twitter = models.CharField(max_length=500, blank=True)
 
     def __str__(self):
         return self.university_name

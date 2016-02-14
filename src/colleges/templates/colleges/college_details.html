@@ -97,19 +97,39 @@
                     <h3><span class="label label-default">Special courses offered</span></h3>
                     <ul>
                         {% if college_details.course_one %}
-                        <li><a href="#">{{ college_details.course_one }}</a></li>
+                        <li>
+                            <a href="http://{{ college_details.course1_link }}" target="_blank">
+                                {{ college_details.course_one }}
+                            </a>
+                        </li>
                         {% endif %}
                         {% if college_details.course_two %}
-                        <li><a href="#">{{ college_details.course_two }}</a></li>
+                        <li>
+                            <a href="http://{{ college_details.course2_link }}" target="_blank">
+                                {{ college_details.course_two }}
+                            </a>
+                        </li>
                         {% endif %}
                         {% if college_details.course_three %}
-                        <li><a href="#">{{ college_details.course_three }}</a></li>
+                        <li>
+                            <a href="http://{{ college_details.course3_link }}" target="_blank">
+                                {{ college_details.course_three }}
+                            </a>
+                        </li>
                         {% endif %}
                         {% if college_details.course_four %}
-                        <li><a href="#">{{ college_details.course_four }}</a></li>
+                        <li>
+                            <a href="http://{{ college_details.course4_link }}" target="_blank">
+                                {{ college_details.course_four }}
+                            </a>
+                        </li>
                         {% endif %}
                         {% if college_details.course_five %}
-                        <li><a href="#">{{ college_details.course_five }}</a></li>
+                        <li>
+                            <a href="http://{{ college_details.course5_link }}" target="_blank">
+                                {{ college_details.course_five }}
+                            </a>
+                        </li>
                         {% endif %}
                     </ul>
                 </div>
@@ -122,7 +142,7 @@
                     {{ college_details.phone }}<br />
                     {{ college_details.email }}<br />
                         {% if college_details.website %}
-                    <a href="#">
+                        <a href="http://{{ college_details.website }}" target="_blank">
                         {{ college_details.website }}
                     </a>
                     {% endif %}
@@ -131,8 +151,16 @@
                 <div class="sidebar-module text-center">
                     <h4><span class="label label-default">Find us on</span></h4>
                     <ol class="list-unstyled">
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
+                        <li>
+                            <a href="http://{{ college_details.twitter }}" target="_blank">
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://{{ college_details.facebook }}" target="_blank">
+                                Facebook
+                            </a>
+                        </li>
                     </ol>
                 </div>
             </div>

@@ -28,12 +28,23 @@ class HighSchool(models.Model):
     email = models.EmailField()
     website = models.CharField(max_length=500, blank=True)
 
-    subject_one = models.CharField(max_length=500, blank=True)
-    subject_two = models.CharField(max_length=500, blank=True)
-    subject_three = models.CharField(max_length=500, blank=True)
-    subject_four = models.CharField(max_length=500, blank=True)
-    subject_five = models.CharField(max_length=500, blank=True)
+    # special courses
+    course_one = models.CharField(max_length=500, blank=True)
+    course1_link = models.CharField(max_length=500, blank=True)
+    course_two = models.CharField(max_length=500, blank=True)
+    course2_link = models.CharField(max_length=500, blank=True)
+    course_three = models.CharField(max_length=500, blank=True)
+    course3_link = models.CharField(max_length=500, blank=True)
+    course_four = models.CharField(max_length=500, blank=True)
+    course4_link = models.CharField(max_length=500, blank=True)
+    course_five = models.CharField(max_length=500, blank=True)
+    course5_link = models.CharField(max_length=500, blank=True)
+
     high_school_file = models.FileField(upload_to='high_school/high_school_files', blank=True)
+
+    # social networks
+    facebook = models.CharField(max_length=500, blank=True)
+    twitter = models.CharField(max_length=500, blank=True)
 
     def __str__(self):
         return self.high_school_name
