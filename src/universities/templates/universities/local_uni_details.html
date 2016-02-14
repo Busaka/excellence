@@ -95,21 +95,41 @@
             <div class=" well well1">
                 <div class="sidebar-module">
                     <h3><span class="label label-default">Special courses offered</span></h3>
-                    <ul">
+                    <ul>
                         {% if local_university_details.course_one %}
-                        <li><a href="#">{{ local_university_details.course_one }}</a></li>
+                        <li>
+                            <a href="http://{{ local_university_details.course1_link }}" target="_blank">
+                                {{ local_university_details.course_one }}
+                            </a>
+                        </li>
                         {% endif %}
                         {% if local_university_details.course_two %}
-                        <li><a href="#">{{ local_university_details.course_two }}</a></li>
+                        <li>
+                            <a href="http://{{ local_university_details.course2_link }}" target="_blank" >
+                                {{ local_university_details.course_two }}
+                            </a>
+                        </li>
                         {% endif %}
                         {% if local_university_details.course_three %}
-                        <li><a href="#">{{ local_university_details.course_three }}</a></li>
+                        <li>
+                            <a href="http://{{ local_university_details.course3_link }}" target="_blank">
+                                {{ local_university_details.course_three }}
+                            </a>
+                        </li>
                         {% endif %}
                         {% if local_university_details.course_four %}
-                        <li><a href="#">{{ local_university_details.course_four }}</a></li>
+                        <li>
+                            <a href="http://{{ local_university_details.course4_link }}" target="_blank">
+                                {{ local_university_details.course_four }}
+                            </a>
+                        </li>
                         {% endif %}
                         {% if local_university_details.course_five %}
-                        <li><a href="#">{{ local_university_details.course_five }}</a></li>
+                        <li>
+                            <a href="http://{{ local_university_details.course5_link }}" target="_blank">
+                                {{ local_university_details.course_five }}
+                            </a>
+                        </li>
                         {% endif %}
                     </ul>
                 </div>
@@ -122,7 +142,7 @@
                     {{ local_university_details.phone }}<br />
                     {{ local_university_details.email }}<br />
                     {% if local_university_details.website %}
-                    <a href="http://{{ local_university_details.website }}">
+                    <a href="http://{{ local_university_details.website }}" target="_blank">
                     {{ local_university_details.website }}
                     </a>
                     {% endif %}
@@ -131,8 +151,16 @@
                 <div class="sidebar-module">
                     <h4 class="text-center"><span class="label label-default">Find us on</span></h4>
                     <ol class="list-unstyled text-center">
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
+                        <li>
+                            <a href="http://{{ local_university_details.twitter }}" target="_blank">
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://{{ local_university_details.facebook }}" target="_blank">
+                                Facebook
+                            </a>
+                        </li>
                     </ol>
                 </div>
             </div>
