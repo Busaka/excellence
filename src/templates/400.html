@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}{{ block.super }}Bad Request{% endblock %}
+
+{% block content %}
+    
+<div class="container">
+    <p>(400 Error Occurred) Bad Request. Please try again. </p>
+</div>
+
+{% endblock content %}
+

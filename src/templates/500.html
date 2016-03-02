@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}{{ block.super }}Server Error{% endblock %}
+
+{% block content %}
+    
+<div class="container">
+    <p>(500 Error Occurred) Server Error. We've been notified, please try again later.</p>
+</div>
+
+{% endblock content %}
+
