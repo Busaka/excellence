@@ -12,6 +12,7 @@ import magazine.urls
 import news.urls
 import colleges.urls
 import universities.urls
+import membership.urls
 from . import views
 
 urlpatterns = [
@@ -27,6 +28,7 @@ urlpatterns = [
     url(r'^news/', include(news.urls, namespace='news')),
     url(r'^colleges/', include(colleges.urls, namespace='colleges')),
     url(r'^universities/', include(universities.urls, namespace='universities')),
+    url(r'^membership/', include(membership.urls, namespace='membership')),
     # url(r'^search/', include('haystack.urls')),
 ]
 
