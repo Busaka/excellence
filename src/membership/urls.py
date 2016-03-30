@@ -19,6 +19,7 @@ from django.conf.urls import url
 from membership import views
 
 urlpatterns = [
+    url(r'^home$', views.home, name='home'),
     url(r'^basic$', views.basic, name='basic'),
     url(r'^premium$', views.premium, name='premium'),
 ]

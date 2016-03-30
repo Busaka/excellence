@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}{{ block.super }}Membership{% endblock %}
+
+{% block content %}
+    
+<div class="container">
+    <div class="well well1">
+        <div class="well well1">
+            <strong>
+                <h3>The Excellent Exam Revision Plan</h3>
+            </strong>
+            <p>
+            Revision must be one of the most individualized processes within academic life. While it is
+            possible to get ideas from others and from books, about how to revise, you also need to get to
+            know what your own personal strengths and weaknesses are. How much do you already know?
+            How do you revise? What are the factors that usually cause problems for you in managing your
+            revision?
+            </p>
+            <p>
+            We all understand the importance of revision. Most work hard at it, but we don't always work
+            well at it. As with any other aspect of your studies, you need to organize your time and plan your
+            revision in advance.
+            </p>
+            <p>
+            The main purpose for revising is always to:
+            </p>
+            <ul>
+                <li>
+                    Understand the topic for which you are sitting an exam
+                </li>
+                <li>
+                    Commit what you have learnt and understood to memory
+                </li>
+                <li>
+                    Practice planning and writing answers to questions
+                </li>
+            </ul>
+            <p>
+            To enable you to do this, you will need to organize your class notes, books and other revision
+            materials in a nice way. This section includes a series of examination papers and assessment tests
+            that will help improve your grade as your progress towards your final exam. It also includes
+            advice and other useful nuggets that will guide you as you organize your revision and study plan:
+            </p>
+        </div>
+        <div class="well well1">
+            <h4>
+                <strong>
+                    Membership
+                </strong>
+            </h4>
+            <p>
+            To use this site, there are two sets of membership plans:
+            </p>
+        </div>
+        <div class="well well1">
+            <h4>
+                <strong>
+                    1. Basic Membership - FREE
+                </strong>
+            </h4>
+            <p>
+            This is strictly for students only.
+            </p>
+            <p>
+            Registration is free and once verified and activated, a student enjoys access to revision materials
+            in all the subjects and even for previous forms. This is important especially for candidates as
+            they are expected to have perfect mastery of what was learnt in the previous classes.
+            </p>
+            <p>
+            This section also gives students access to a wide variety of study tips and guidance in difference
+            subjects as well as in examinations. All the materials can be downloaded and used by the
+            students for purposes of building their knowledge and preparation for examinations.
+            </p>
+            <p>
+            Basic membership gives students access to our periodical newlines and important updates
+            regarding their student and academic life as well as careers and other study opportunities beyond
+            K.C.S.E.
+            </p>
+            <h4>
+                <strong>
+                    Advantages of being a basic member
+                </strong>
+            </h4>
+            <ol>
+                <li>
+                    Membership is FREE
+                </li>
+                <li>
+                    Access to unlimited revision resources in all the forms
+                </li>
+                <li>
+                    Access to unlimited nuggets of academic excellence from qualified and experienced
+                    columnists of the ESM magazine and others
+                </li>
+                <li>
+                    Prompt feedback on all inquiries
+                </li>
+                <li>
+                    Access to quality discussions on our online forums
+                </li>
+                <li>
+                    Access to our periodical newslines and other updates
+                </li>
+            </ol>
+            <div class="text-center">
+                <p><a class="btn btn-lg btn-primary" href="{% url 'high_schools:home' %}" role="button">Login</a>&nbsp;&nbsp;&nbsp;Don't have an account?&nbsp;&nbsp;
+                <a class="btn btn-lg btn-primary" href="{% url 'high_schools:home' %}" role="button">Create an account</a></p>
+            </div>
+
+        </div>
+        <div class="well well1">
+            <h4>
+                <strong>
+                    2. Premium Membership
+                </strong>
+            </h4>
+            <p>
+            This section gives access to a wide variety of examinations, teaching and learning resources. The
+            examinations are provided into categories but can also be provided on request.
+            </p>
+            <p>
+            For this section, membership is by subscription, which is either termly or annually. By being an
+            active member, a user is guaranteed access to seminars and workshops on discounted rates,
+            teaching and learning manuals and other literature that is beneficial to the schools’ academic
+            progress.
+            </p>
+
+            <p>
+            Secondly, schools can enjoy quality consultancy on ways of developing and managing their
+            online academic branding; this includes development of websites, school management and exam
+            management systems among others.
+            </p>
+            <h4>
+                <strong>
+                    Advantages
+                </strong>
+            </h4>
+            <ol>
+                <li>
+                    Access to full assessment tests and end term exams with marking schemes
+                </li>
+                <li>
+                    Access to academic symposiums in the course of the term
+                </li>
+                <li>
+                    Access to excellent teaching resources
+                </li>
+            </ol>
+            <div class="text-center">
+                <p><a class="btn btn-lg btn-primary" href="{% url 'high_schools:home' %}" role="button">Login</a>&nbsp;&nbsp;&nbsp;Don't have an account?&nbsp;&nbsp;
+                <a class="btn btn-lg btn-primary" href="{% url 'high_schools:home' %}" role="button">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
