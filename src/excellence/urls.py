@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^universities/', include(universities.urls, namespace='universities')),
     url(r'^membership/', include(membership.urls, namespace='membership')),
     # url(r'^search/', include('haystack.urls')),
+    url(r'^', include(accounts.urls, namespace='accounts')),
 ]
 
 # User-uploaded files like profile pics need to be served in development

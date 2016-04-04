@@ -15,7 +15,17 @@ class BaseProfile(models.Model):
                                 upload_to='profile_pics/%Y-%m-%d/',
                                 null=True,
                                 blank=True)
-    bio = models.CharField("Short Bio", max_length=200, blank=True, null=True)
+    # bio = models.CharField("Short Bio", max_length=200, blank=True, null=True)
+    school = models.CharField("School Name", max_length=200, blank=True, null=True)
+    school_phone = models.CharField("School Phone", max_length=200, blank=True, null=True)
+    school_email = models.EmailField("School Email", max_length=200, blank=True, null=True)
+    website = models.CharField("School Website", max_length=200, blank=True, null=True)
+    location = models.CharField("Location", max_length=200, blank=True, null=True)
+    user_phone = models.CharField("Your Phone Number", max_length=200, blank=True, null=True)
+    study_level = models.CharField("Study Level(Student Only)", max_length=200, blank=True, null=True)
+    career1 = models.CharField("First Career  Option(Student Only)", max_length=200, blank=True, null=True)
+    career2 = models.CharField("Second Career Option(Student Only)", max_length=200, blank=True, null=True)
+    career3 = models.CharField("Third Career Option(Student Only)", max_length=200, blank=True, null=True)
     email_verified = models.BooleanField("Email verified", default=False)
 
     class Meta:

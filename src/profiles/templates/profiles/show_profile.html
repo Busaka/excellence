@@ -5,7 +5,7 @@
 
 {% block title %}{{ block.super }}Profile{% endblock %}
 
-{% block container %}
+{% block content %}
 
 <div class="container profile-head">
   <div class="row">
@@ -15,8 +15,10 @@
       <a href="{% url 'profiles:edit_self' %}" class="btn btn-info">Edit Profile</a>
       {% endif %}
     </div>
+    {% if show_user.profile.picture %}
     <div class="col-sm-2"><img title="profile picture" class="img-circle img-responsive" src="{% thumbnail show_user.profile.picture|default:'default_profile.png' 140x140 crop %}">
     </div>
+    {% endif %}
   </div>
 </div>
 
@@ -24,7 +26,14 @@
   <div class="row">
     <div class="col-sm-4">
       <ul class="list-group">
-        <li class="list-group-item text-muted">Profile</li>
+        <li class="list-group-item text-center"><strong>SCHOOL INFO</strong></li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>School</strong></span> {{ show_user.profile.school }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>School Phone</strong></span> {{ show_user.profile.school_phone }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>School Email</strong></span> {{ show_user.profile.school_email }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>School Website</strong></span> {{ show_user.profile.website }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Location</strong></span> {{ show_user.profile.location }}</li>
+        <li class="list-group-item text-center"><strong>MY INFO</strong></li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Phone</strong></span> {{ show_user.profile.user_phone }}</li>
         <li class="list-group-item text-right"><span class="pull-left"><strong>Email:</strong></span> {{ show_user.email|default:"missing" }}
 	  {% if show_user.profile.email_verified %}
 	    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true" title="This email address has been verified"></span>
@@ -36,6 +45,12 @@
 	</li>
         <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span> {{ show_user.date_joined }}</li>
         <li class="list-group-item text-right"><span class="pull-left"><strong>Last seen</strong></span> {{ show_user.last_login }}</li>
+      </ul>
+      <ul class="list-group">
+        <li class="list-group-item text-center"><strong>CAREER OPTIONS</strong></li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>First Career Option</strong></span> {{ show_user.profile.career1 }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Second Career Option</strong></span> {{ show_user.profile.career2 }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Third Career Option</strong></span> {{ show_user.profile.career3 }}</li>
       </ul>
     </div>
     <div class="col-sm-8">
@@ -50,8 +65,8 @@
 	  {% endif %}
 	</div>
         <div class="panel-body">
-	  <strong>Bio</strong>: {{ show_user.profile.bio }}
-	</div>
+            <strong>Bio</strong>: <span class="p-color"> {{ show_user.profile.bio }}
+            </span>	</div>
       </div>
     </div>
   </div>
