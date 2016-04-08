@@ -179,7 +179,6 @@
                     <li><a href="{% url 'contact:home' %}">Contact us</a></li>
                     <li>
                     </li>
-                </ul>
                 <div class="pull-right">
                     <form class="navbar-form navbar-right">{% csrf_token %}
                         <div class="form-group">
@@ -188,6 +187,7 @@
                         <button type="submit" class="btn btn-success">Go</button>
                     </form>
                 </div>
+                </ul>
   <ul class="nav navbar-nav navbar-right">
             {% block navbar-right %}
               {% if user.is_authenticated %}
@@ -255,7 +255,7 @@
         </nav>
       </div>
       <p><a href="{% url
-          'excellence_profile:excellence_copyright'%}">Copyright &copy;{% now 'Y' %}</a> Excellent Student Limited  <a href="{% url 'excellence_profile:terms_and_conditions'%}">Terms and Conditions</a></p>
+          'excellence_profile:excellence_copyright'%}">Company &copy;{% now 'Y' %}</a> Excellent Student Limited  <a href="{% url 'excellence_profile:terms_and_conditions'%}">Terms and Conditions</a></p>
       </footer>
     </div>
     {% endblock %}

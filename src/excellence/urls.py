@@ -19,7 +19,7 @@ urlpatterns = [
     url(r'^$', views.HomePage.as_view(), name='home'),
     url(r'^excellence_profile/', include(excellence_profile.urls, namespace='excellence_profile')),
     url(r'^users/', include(profiles.urls, namespace='profiles')),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^ajhfkjvhksjhbgvkhjgx vbbhdmin/', include(admin.site.urls)),
     url(r'^', include(accounts.urls, namespace='accounts')),
     url(r'^high_schools/', include(high_schools.urls, namespace='high_schools')),
     url(r'^contact/', include(contact.urls, namespace='contact')),

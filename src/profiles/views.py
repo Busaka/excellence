@@ -5,6 +5,7 @@ from django.contrib import messages
 from braces.views import LoginRequiredMixin
 from . import forms
 from . import models
+from membership import models
 
 
 class ShowProfile(LoginRequiredMixin, generic.TemplateView):
@@ -23,6 +24,15 @@ class ShowProfile(LoginRequiredMixin, generic.TemplateView):
             kwargs["editable"] = True
         kwargs["show_user"] = user
         return super(ShowProfile, self).get(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super(ShowProfile, self).get_context_data(**kwargs)
+        context['form1'] = models.BasicForm1Exam.objects.all()
+        return context
+
+    def dispatch(self, request, *args, **kwargs):
+        print(request)
+        return super(ShowProfile, self).dispatch(request, *args, **kwargs)
 
 
 class EditProfile(LoginRequiredMixin, generic.TemplateView):

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}{{ block.super }}Form2 CAT3{% endblock %}
+
+{% block content %}
+    
+<div class="container">
+    {% for item in form2_cat3 %}
+    <h3>{{ item }}</h3>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject1 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject2 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject3 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject4 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject5 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject6 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject7 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject8 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject9 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject10 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject11 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject12 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject13 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject14 }} </strong></a> </p>
+                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject15 }} </strong></a> </p>
+    {% endfor %}
+</div>
+
+{% endblock content %}
+
