@@ -16,6 +16,7 @@ class BaseProfile(models.Model):
                                 null=True,
                                 blank=True)
     # bio = models.CharField("Short Bio", max_length=200, blank=True, null=True)
+    status = models.CharField("Status", max_length=200, blank=True, null=True)
     school = models.CharField("School Name", max_length=200, blank=True, null=True)
     school_phone = models.CharField("School Phone", max_length=200, blank=True, null=True)
     school_email = models.EmailField("School Email", max_length=200, blank=True, null=True)

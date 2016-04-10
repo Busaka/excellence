@@ -8,22 +8,52 @@
     
 <div class="container">
     {% for item in form2_cat1 %}
-    <h3>{{ item }}</h3>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject1 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject2 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject3 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject4 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject5 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject6 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject7 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject8 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject9 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject10 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject11 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject12 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject13 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject14 }} </strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.subject15 }} </strong></a> </p>
+    <h3><span class="label label-default">{{ item }}</span></h3>
+    {% if item.subject1 and item.subject1_code %}
+    <p> <a href="{{ item.subject1_code.url }}"<span class="btn btn-default"><strong>{{ item.subject1 }}</strong></span></a> </p>
+    {% endif %}
+    {% if item.subject2 and item.subject2_code %}
+                <p> <a href="{{ item.subject2_code.url }}"<span class="btn btn-default"><strong>{{ item.subject2 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject3 and item.subject3_code %}
+                <p> <a href="{{ item.subject3_code.url }}"<span class="btn btn-default"><strong>{{ item.subject3 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject4 and item.subject4_code %}
+                <p> <a href="{{ item.subject4_code.url }}"<span class="btn btn-default"><strong>{{ item.subject4 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject5 and item.subject5_code %}
+                <p> <a href="{{ item.subject5_code.url }}"<span class="btn btn-default"><strong>{{ item.subject5 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject6 and item.subject6_code %}
+                <p> <a href="{{ item.subject6_code.url }}"<span class="btn btn-default"><strong>{{ item.subject6 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject7 and item.subject7_code %}
+                <p> <a href="{{ item.subject7_code.url }}"<span class="btn btn-default"><strong>{{ item.subject7 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject8 and item.subject8_code %}
+                <p> <a href="{{ item.subject8_code.url }}"<span class="btn btn-default"><strong>{{ item.subject8 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject9 and item.subject9_code %}
+                <p> <a href="{{ item.subject9_code.url }}"<span class="btn btn-default"><strong>{{ item.subject9 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject10 and item.subject10_code %}
+                <p> <a href="{{ item.subject10_code.url }}"<span class="btn btn-default"><strong>{{ item.subject10 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject11 and item.subject11_code %}
+                <p> <a href="{{ item.subject11_code.url }}"<span class="btn btn-default"><strong>{{ item.subject11 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject12 and item.subject12_code %}
+                <p> <a href="{{ item.subject12_code.url }}"<span class="btn btn-default"><strong>{{ item.subject12 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject13 and item.subject13_code %}
+                <p> <a href="{{ item.subject13_code.url }}"<span class="btn btn-default"><strong>{{ item.subject13 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject14 and item.subject14_code %}
+                <p> <a href="{{ item.subject14_code.url }}"<span class="btn btn-default"><strong>{{ item.subject14 }} </strong></span></a> </p>
+    {% endif %}
+    {% if item.subject15 and item.subject15_code %}
+                <p> <a href="{{ item.subject15_code.url }}"<span class="btn btn-default"><strong>{{ item.subject15 }} </strong></span></a> </p>
+    {% endif %}
     {% endfor %}
 </div>
 

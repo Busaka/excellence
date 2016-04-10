@@ -85,6 +85,7 @@
                     <a href="{% url 'membership:basic_form4_exams' %}" class="btn btn-info"><strong>Form Four</strong></a> 
                 </div>
                 <br />
+                {% if show_user.profile.status == 'premium' %}
                 <span class="p-color text-center">
             <strong> <p> PREMIUM REVISION RESOURCES </p> </strong>
                 </span>
@@ -143,6 +144,11 @@
                     </div>
                     </div>
                 </div>
+                {% else %}
+                <span class="p-color text-center">
+            <strong> <p>Upgrade to premium membership to access more exams and answers.<p><a href="#" class="btn btn-success"><strong>Upgrade</strong></a></p></p> </strong>
+                </span>
+                {% endif %}
                 <br />
                 <span class="p-color">
             <strong> <p>NUGGETS OF ACADEMIC EXCELLENCE</p> </strong>
