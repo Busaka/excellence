@@ -3,7 +3,8 @@ from . import models
 
 # Register your models here.
 
-admin.site.register(models.StudyTip)
+admin.site.register(models.BasicStudyTip)
+admin.site.register(models.PremiumStudyTip)
 admin.site.register(models.BasicForm1Exam)
 admin.site.register(models.BasicForm2Exam)
 admin.site.register(models.BasicForm3Exam)

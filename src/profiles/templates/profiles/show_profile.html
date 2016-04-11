@@ -85,6 +85,59 @@
                     <a href="{% url 'membership:basic_form4_exams' %}" class="btn btn-info"><strong>Form Four</strong></a> 
                 </div>
                 <br />
+                <span class="p-color">
+            <strong> <p>BASIC NUGGETS OF ACADEMIC EXCELLENCE</p> </strong>
+                </span>
+                <div class="p-color">
+                    {% for item in basic_study_tips %}
+    {% if item.tip1 and item.tip1_file %}
+                    <p> <a href="{{ item.tip1_file.url }}"><strong>{{ item.tip1 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip2 and item.tip2_file %}
+                    <p> <a href="{{ item.tip2_file.url }}"><strong>{{ item.tip2 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip3 and item.tip3_file %}
+                    <p> <a href="{{ item.tip3_file.url }}"><strong>{{ item.tip3 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip4 and item.tip4_file %}
+                    <p> <a href="{{ item.tip4_file.url }}"><strong>{{ item.tip4 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip5 and item.tip5_file %}
+                    <p> <a href="{{ item.tip5_file.url }}"><strong>{{ item.tip5 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip6 and item.tip6_file %}
+                    <p> <a href="{{ item.tip6_file.url }}"><strong>{{ item.tip6 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip7 and item.tip7_file %}
+                    <p> <a href="{{ item.tip7_file.url }}"><strong>{{ item.tip7 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip8 and item.tip8_file %}
+                    <p> <a href="{{ item.tip8_file.url }}"><strong>{{ item.tip8 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip9 and item.tip9_file %}
+                    <p> <a href="{{ item.tip9_file.url }}"><strong>{{ item.tip9 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip10 and item.tip10_file %}
+                    <p> <a href="{{ item.tip10_file.url }}"><strong>{{ item.tip10 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip11 and item.tip11_file %}
+                    <p> <a href="{{ item.tip11_file.url }}"><strong>{{ item.tip11 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip12 and item.tip12_file %}
+                    <p> <a href="{{ item.tip12_file.url }}"><strong>{{ item.tip12 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip13 and item.tip13_file %}
+                    <p> <a href="{{ item.tip13_file.url }}"><strong>{{ item.tip13 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip14 and item.tip14_file %}
+                    <p> <a href="{{ item.tip14_file.url }}"><strong>{{ item.tip14 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip15 and item.tip15_file %}
+                    <p> <a href="{{ item.tip15_file.url }}"><strong>{{ item.tip15 }}</strong></a> </p>
+	  {% endif %}
+                    {% endfor %}
+                </div>
+                <br />
                 {% if show_user.profile.status == 'premium' %}
                 <span class="p-color text-center">
             <strong> <p> PREMIUM REVISION RESOURCES </p> </strong>
@@ -143,35 +196,64 @@
                         <a href="{% url 'membership:form4_revision' %}" class="btn btn-info"><strong>REVISION</strong></a> 
                     </div>
                     </div>
+                <span class="p-color">
+            <strong> <p>PREMIUM NUGGETS OF ACADEMIC EXCELLENCE</p> </strong>
+                </span>
+                <div class="p-color">
+                    {% for item in premium_study_tips %}
+    {% if item.tip1 and item.tip1_file %}
+                    <p> <a href="{{ item.tip1_file.url }}"><strong>{{ item.tip1 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip2 and item.tip2_file %}
+                    <p> <a href="{{ item.tip2_file.url }}"><strong>{{ item.tip2 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip3 and item.tip3_file %}
+                    <p> <a href="{{ item.tip3_file.url }}"><strong>{{ item.tip3 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip4 and item.tip4_file %}
+                    <p> <a href="{{ item.tip4_file.url }}"><strong>{{ item.tip4 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip5 and item.tip5_file %}
+                    <p> <a href="{{ item.tip5_file.url }}"><strong>{{ item.tip5 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip6 and item.tip6_file %}
+                    <p> <a href="{{ item.tip6_file.url }}"><strong>{{ item.tip6 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip7 and item.tip7_file %}
+                    <p> <a href="{{ item.tip7_file.url }}"><strong>{{ item.tip7 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip8 and item.tip8_file %}
+                    <p> <a href="{{ item.tip8_file.url }}"><strong>{{ item.tip8 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip9 and item.tip9_file %}
+                    <p> <a href="{{ item.tip9_file.url }}"><strong>{{ item.tip9 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip10 and item.tip10_file %}
+                    <p> <a href="{{ item.tip10_file.url }}"><strong>{{ item.tip10 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip11 and item.tip11_file %}
+                    <p> <a href="{{ item.tip11_file.url }}"><strong>{{ item.tip11 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip12 and item.tip12_file %}
+                    <p> <a href="{{ item.tip12_file.url }}"><strong>{{ item.tip12 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip13 and item.tip13_file %}
+                    <p> <a href="{{ item.tip13_file.url }}"><strong>{{ item.tip13 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip14 and item.tip14_file %}
+                    <p> <a href="{{ item.tip14_file.url }}"><strong>{{ item.tip14 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip15 and item.tip15_file %}
+                    <p> <a href="{{ item.tip15_file.url }}"><strong>{{ item.tip15 }}</strong></a> </p>
+	  {% endif %}
+                    {% endfor %}
+                </div>
                 </div>
                 {% else %}
                 <span class="p-color text-center">
-            <strong> <p>Upgrade to premium membership to access more exams and answers.<p><a href="#" class="btn btn-success"><strong>Upgrade</strong></a></p></p> </strong>
+            <strong> <p>Upgrade to premium membership to access more exams and answers.<p><a href="{% url 'membership:premium_membership' %}" class="btn btn-success"><strong>Upgrade</strong></a></p></p> </strong>
                 </span>
                 {% endif %}
-                <br />
-                <span class="p-color">
-            <strong> <p>NUGGETS OF ACADEMIC EXCELLENCE</p> </strong>
-                </span>
-                <div class="p-color">
-                    {% for item in study_tips %}
-                <p> <a href="{% url 'membership:basic_form1_exams' %}"><strong>{{ item.tip1 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip2 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip3 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip4 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip5 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip6 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip7 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip8 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip9 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip10 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip11 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip12 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip13 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip14 }}</strong></a> </p>
-                <p> <a href="{% url 'profiles:edit_self' %}"><strong>{{ item.tip15 }}</strong></a> </p>
-                    {% endfor %}
-                </div>
         </div>
       </div>
     </div>

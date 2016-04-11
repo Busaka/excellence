@@ -156,7 +156,7 @@ button.list-group-item {
 .nav > li > a {
     position: relative;
     display: block;
-    padding: 19px 6px;
+    padding: 19px 5px;
 }
 .thumbnail1 {
     margin-bottom: 0px;
@@ -175,4 +175,7 @@ button.list-group-item {
 .profile-head {
     padding: 69px 19px 30px 38px;
     width: 1066px;
+}
+.navbar-right1 {
+    margin-right: -4px;
 }

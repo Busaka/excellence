@@ -49,6 +49,13 @@ def basic_form4_exams(request):
 # Form One Premium services
 ########################################################################################
 
+def premium_membership(request):
+    """TODO: Docstring for home.
+    :returns: TODO
+
+    """
+    return render(request, 'membership/premium_membership.html', {})
+
 def form1_cat1(request):
     """TODO: Docstring for home.
     :returns: TODO

@@ -2,25 +2,76 @@ from __future__ import unicode_literals
 from django.db import models
 
 
-class StudyTip(models.Model):
+class BasicStudyTip(models.Model):
     tip1 = models.CharField("Study Tip One", max_length=200, blank=True, null=True)
+    tip1_file = models.FileField("Tip One File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip2 = models.CharField("Study Tip Two", max_length=200, blank=True, null=True)
+    tip2_file = models.FileField("Tip Two File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip3 = models.CharField("Study Tip Three", max_length=200, blank=True, null=True)
+    tip3_file = models.FileField("Tip Three File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip4 = models.CharField("Study Tip Four", max_length=200, blank=True, null=True)
+    tip4_file = models.FileField("Tip Four File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip5 = models.CharField("Study Tip Five", max_length=200, blank=True, null=True)
+    tip5_file = models.FileField("Tip Five File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip6 = models.CharField("Study Tip Six", max_length=200, blank=True, null=True)
+    tip6_file = models.FileField("Tip Six File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip7 = models.CharField("Study Tip Seven", max_length=200, blank=True, null=True)
+    tip7_file = models.FileField("Tip Seven File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip8 = models.CharField("Study Tip Eight", max_length=200, blank=True, null=True)
+    tip8_file = models.FileField("Tip Eight File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip9 = models.CharField("Study Tip Nine", max_length=200, blank=True, null=True)
+    tip9_file = models.FileField("Tip Nine File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip10 = models.CharField("Study Tip Ten", max_length=200, blank=True, null=True)
+    tip10_file = models.FileField("Tip Ten File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip11 = models.CharField("Study Tip Eleven", max_length=200, blank=True, null=True)
+    tip11_file = models.FileField("Tip Eleven File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip12 = models.CharField("Study Tip Twelve", max_length=200, blank=True, null=True)
+    tip12_file = models.FileField("Tip Twelve File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip13 = models.CharField("Study Tip Thirteen", max_length=200, blank=True, null=True)
+    tip13_file = models.FileField("Tip Thirteen File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip14 = models.CharField("Study Tip Fourteen", max_length=200, blank=True, null=True)
+    tip14_file = models.FileField("Tip Fourteen File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
     tip15 = models.CharField("Study Tip Fifteen", max_length=200, blank=True, null=True)
+    tip15_file = models.FileField("Tip Fifteen File",upload_to='membership/study_tips/basic', max_length=200, blank=True, null=True)
 
     def __str__(self):
-        return 'Study Tips'
+        return 'Basic Study Tips'
+
+
+class PremiumStudyTip(models.Model):
+    tip1 = models.CharField("Study Tip One", max_length=200, blank=True, null=True)
+    tip1_file = models.FileField("Tip One File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip2 = models.CharField("Study Tip Two", max_length=200, blank=True, null=True)
+    tip2_file = models.FileField("Tip Two File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip3 = models.CharField("Study Tip Three", max_length=200, blank=True, null=True)
+    tip3_file = models.FileField("Tip Three File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip4 = models.CharField("Study Tip Four", max_length=200, blank=True, null=True)
+    tip4_file = models.FileField("Tip Four File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip5 = models.CharField("Study Tip Five", max_length=200, blank=True, null=True)
+    tip5_file = models.FileField("Tip Five File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip6 = models.CharField("Study Tip Six", max_length=200, blank=True, null=True)
+    tip6_file = models.FileField("Tip Six File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip7 = models.CharField("Study Tip Seven", max_length=200, blank=True, null=True)
+    tip7_file = models.FileField("Tip Seven File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip8 = models.CharField("Study Tip Eight", max_length=200, blank=True, null=True)
+    tip8_file = models.FileField("Tip Eight File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip9 = models.CharField("Study Tip Nine", max_length=200, blank=True, null=True)
+    tip9_file = models.FileField("Tip Nine File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip10 = models.CharField("Study Tip Ten", max_length=200, blank=True, null=True)
+    tip10_file = models.FileField("Tip Ten File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip11 = models.CharField("Study Tip Eleven", max_length=200, blank=True, null=True)
+    tip11_file = models.FileField("Tip Eleven File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip12 = models.CharField("Study Tip Twelve", max_length=200, blank=True, null=True)
+    tip12_file = models.FileField("Tip Twelve File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip13 = models.CharField("Study Tip Thirteen", max_length=200, blank=True, null=True)
+    tip13_file = models.FileField("Tip Thirteen File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip14 = models.CharField("Study Tip Fourteen", max_length=200, blank=True, null=True)
+    tip14_file = models.FileField("Tip Fourteen File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+    tip15 = models.CharField("Study Tip Fifteen", max_length=200, blank=True, null=True)
+    tip15_file = models.FileField("Tip Fifteen File",upload_to='membership/study_tips/premium', max_length=200, blank=True, null=True)
+
+    def __str__(self):
+        return 'Premium Study Tips'
 
 
 class BasicForm1Exam(models.Model):

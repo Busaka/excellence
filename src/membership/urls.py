@@ -20,6 +20,7 @@ from membership import views
 
 urlpatterns = [
     url(r'^home$', views.home, name='home'),
+    url(r'^premium_membership$', views.premium_membership, name='premium_membership'),
     url(r'^basic_form1_exams$', views.basic_form1_exams, name='basic_form1_exams'),
     url(r'^basic_form2_exams$', views.basic_form2_exams, name='basic_form2_exams'),
     url(r'^basic_form3_exams$', views.basic_form3_exams, name='basic_form3_exams'),
