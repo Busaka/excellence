@@ -137,6 +137,10 @@ button.list-group-item {
     margin-right: -78px;
     margin-left: -64px;
 }
+.row4 {
+    margin-right: -78px;
+    margin-left: -23px;
+}
 .row2{
     /* margin-right: -78px; */
     margin-left: -3px;
@@ -148,6 +152,11 @@ button.list-group-item {
 }
 .nav-justified1 {
     background-color: #532571;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 19px 5px;
 }
 .thumbnail1 {
     margin-bottom: 0px;
@@ -162,4 +171,11 @@ button.list-group-item {
 .carousel-inner1 > .item1 > a > img {
   width: 100%;
   height: 140px;
+}
+.profile-head {
+    padding: 69px 19px 30px 38px;
+    width: 1066px;
+}
+.navbar-right1 {
+    margin-right: -4px;
 }

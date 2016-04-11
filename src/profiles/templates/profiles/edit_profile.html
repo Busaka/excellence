@@ -7,7 +7,7 @@
 {% block title %}{{ block.super }}Profile{% endblock %}
 
 <!-- Benefits of the Django application -->
-{% block container %}
+{% block content %}
 
 <div class="container">
   <h1 class="text-primary">Edit Profile</h1>
@@ -15,9 +15,11 @@
   <div class="row">
     <!-- left column -->
     <div class="col-md-3">
+    {% if show_user.profile.picture %}
       <div class="text-center">
         <img title="profile picture" class="img-circle img-responsive" src="{% thumbnail user.profile.picture|default:'default_profile.png' 140x140 crop %}">
       </div>
+    {% endif %}
     </div>
       
     <!-- edit form column -->

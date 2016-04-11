@@ -93,6 +93,7 @@ INSTALLED_APPS = (
     'news.apps.NewsConfig',
     'colleges.apps.CollegesConfig',
     'universities.apps.UniversitiesConfig',
+    'membership.apps.MembershipConfig',
     'excellence_profile.apps.ExcellenceProfileConfig',
 
 )

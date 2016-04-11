@@ -32,10 +32,22 @@ class ProfileForm(forms.ModelForm):
         self.helper.form_tag = False
         self.helper.layout = Layout(
             Field('picture'),
-            Field('bio'),
+            # Field('bio'),
+            Field('school'),
+            Field('school_phone'),
+            Field('school_email'),
+            Field('website'),
+            Field('location'),
+            Field('study_level'),
+            Field('user_phone'),
+            Field('career1'),
+            Field('career2'),
+            Field('career3'),
             Submit('update', 'Update', css_class="btn-success"),
             )
 
     class Meta:
         model = models.Profile
-        fields = ['picture', 'bio']
+        fields = ['picture', 'school', 'school_phone', 'school_email',
+                'website', 'location', 'study_level',
+                'user_phone', 'career1', 'career2', 'career3']

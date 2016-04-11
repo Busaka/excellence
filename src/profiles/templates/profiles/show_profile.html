@@ -5,7 +5,7 @@
 
 {% block title %}{{ block.super }}Profile{% endblock %}
 
-{% block container %}
+{% block content %}
 
 <div class="container profile-head">
   <div class="row">
@@ -15,16 +15,25 @@
       <a href="{% url 'profiles:edit_self' %}" class="btn btn-info">Edit Profile</a>
       {% endif %}
     </div>
+    {% if show_user.profile.picture %}
     <div class="col-sm-2"><img title="profile picture" class="img-circle img-responsive" src="{% thumbnail show_user.profile.picture|default:'default_profile.png' 140x140 crop %}">
     </div>
+    {% endif %}
   </div>
 </div>
 
 <div class="container profile-body">
-  <div class="row">
+  <div class="row row4">
     <div class="col-sm-4">
       <ul class="list-group">
-        <li class="list-group-item text-muted">Profile</li>
+        <li class="list-group-item text-center"><strong>SCHOOL INFO</strong></li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>School</strong></span> {{ show_user.profile.school }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>School Phone</strong></span> {{ show_user.profile.school_phone }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>School Email</strong></span> {{ show_user.profile.school_email }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>School Website</strong></span> {{ show_user.profile.website }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Location</strong></span> {{ show_user.profile.location }}</li>
+        <li class="list-group-item text-center"><strong>MY INFO</strong></li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Phone</strong></span> {{ show_user.profile.user_phone }}</li>
         <li class="list-group-item text-right"><span class="pull-left"><strong>Email:</strong></span> {{ show_user.email|default:"missing" }}
 	  {% if show_user.profile.email_verified %}
 	    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true" title="This email address has been verified"></span>
@@ -37,10 +46,24 @@
         <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span> {{ show_user.date_joined }}</li>
         <li class="list-group-item text-right"><span class="pull-left"><strong>Last seen</strong></span> {{ show_user.last_login }}</li>
       </ul>
+
+	  {% if show_user.profile.career1 %}
+      <ul class="list-group">
+        <li class="list-group-item text-center"><strong>CAREER OPTIONS</strong></li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>First Career Option</strong></span> {{ show_user.profile.career1 }}</li>
+	  {% endif %}
+	  {% if show_user.profile.career2 %}
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Second Career Option</strong></span> {{ show_user.profile.career2 }}</li>
+	  {% endif %}
+	  {% if show_user.profile.career3 %}
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Third Career Option</strong></span> {{ show_user.profile.career3 }}</li>
+      </ul>
+	  {% endif %}
     </div>
     <div class="col-sm-8">
       <div class="panel panel-default">
-        <div class="panel-heading">{{ show_user.get_full_name }}'s Profile
+        <div class="panel-heading">
+    <h4><strong>{{ show_user.get_full_name }}'s Profile</strong>
 	  {% if show_user.profile.slug %}
 	    <a href="{% url 'profiles:show' show_user.profile.slug %}">
 	    	<span class="glyphicon glyphicon-link" aria-hidden="true" title="Profile permalink"></span>
@@ -48,10 +71,190 @@
 	  {% else %}
 		<a href="https://github.com/arocks/edge/issues/40" target="_blank"><span>No permalink. See this issue.</span></a>
 	  {% endif %}
+    </h4>
 	</div>
         <div class="panel-body">
-	  <strong>Bio</strong>: {{ show_user.profile.bio }}
-	</div>
+                <span class="p-color text-center">
+            <strong> <p> BASIC REVISION RESOURCES </p> </strong>
+                </span>
+
+                <div class="text-center">
+                    <a href="{% url 'membership:basic_form1_exams' %}" class="btn btn-info"><strong>Form One</strong></a> 
+                    <a href="{% url 'membership:basic_form2_exams' %}" class="btn btn-info"><strong>Form Two</strong></a> 
+                    <a href="{% url 'membership:basic_form3_exams' %}" class="btn btn-info"><strong>Form Three</strong></a> 
+                    <a href="{% url 'membership:basic_form4_exams' %}" class="btn btn-info"><strong>Form Four</strong></a> 
+                </div>
+                <br />
+                <span class="p-color">
+            <strong> <p>BASIC NUGGETS OF ACADEMIC EXCELLENCE</p> </strong>
+                </span>
+                <div class="p-color">
+                    {% for item in basic_study_tips %}
+    {% if item.tip1 and item.tip1_file %}
+                    <p> <a href="{{ item.tip1_file.url }}"><strong>{{ item.tip1 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip2 and item.tip2_file %}
+                    <p> <a href="{{ item.tip2_file.url }}"><strong>{{ item.tip2 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip3 and item.tip3_file %}
+                    <p> <a href="{{ item.tip3_file.url }}"><strong>{{ item.tip3 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip4 and item.tip4_file %}
+                    <p> <a href="{{ item.tip4_file.url }}"><strong>{{ item.tip4 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip5 and item.tip5_file %}
+                    <p> <a href="{{ item.tip5_file.url }}"><strong>{{ item.tip5 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip6 and item.tip6_file %}
+                    <p> <a href="{{ item.tip6_file.url }}"><strong>{{ item.tip6 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip7 and item.tip7_file %}
+                    <p> <a href="{{ item.tip7_file.url }}"><strong>{{ item.tip7 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip8 and item.tip8_file %}
+                    <p> <a href="{{ item.tip8_file.url }}"><strong>{{ item.tip8 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip9 and item.tip9_file %}
+                    <p> <a href="{{ item.tip9_file.url }}"><strong>{{ item.tip9 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip10 and item.tip10_file %}
+                    <p> <a href="{{ item.tip10_file.url }}"><strong>{{ item.tip10 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip11 and item.tip11_file %}
+                    <p> <a href="{{ item.tip11_file.url }}"><strong>{{ item.tip11 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip12 and item.tip12_file %}
+                    <p> <a href="{{ item.tip12_file.url }}"><strong>{{ item.tip12 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip13 and item.tip13_file %}
+                    <p> <a href="{{ item.tip13_file.url }}"><strong>{{ item.tip13 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip14 and item.tip14_file %}
+                    <p> <a href="{{ item.tip14_file.url }}"><strong>{{ item.tip14 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip15 and item.tip15_file %}
+                    <p> <a href="{{ item.tip15_file.url }}"><strong>{{ item.tip15 }}</strong></a> </p>
+	  {% endif %}
+                    {% endfor %}
+                </div>
+                <br />
+                {% if show_user.profile.status == 'premium' %}
+                <span class="p-color text-center">
+            <strong> <p> PREMIUM REVISION RESOURCES </p> </strong>
+                </span>
+
+                <div class="text-center">
+                    <div class="well">
+                        <p>
+                        <span class="p-color">
+                            <strong>FORM ONE</strong> 
+                        </span>
+                        </p>
+                    <div class="text-center">
+                        <a href="{% url 'membership:form1_cat1' %}" class="btn btn-info"><strong>CAT1</strong></a> 
+                        <a href="{% url 'membership:form1_cat2' %}" class="btn btn-info"><strong>CAT2</strong></a> 
+                        <a href="{% url 'membership:form1_cat3' %}" class="btn btn-info"><strong>CAT3</strong></a> 
+                        <a href="{% url 'membership:form1_end_term' %}" class="btn btn-info"><strong>END TERM EXAM</strong></a> 
+                    </div>
+                    </div>
+                    <div class="well">
+                        <p>
+                        <span class="p-color">
+                            <strong>FORM TWO</strong> 
+                        </span>
+                        </p>
+                    <div class="text-center">
+                        <a href="{% url 'membership:form2_cat1' %}" class="btn btn-info"><strong>CAT1</strong></a> 
+                        <a href="{% url 'membership:form2_cat2' %}" class="btn btn-info"><strong>CAT2</strong></a> 
+                        <a href="{% url 'membership:form2_cat3' %}" class="btn btn-info"><strong>CAT3</strong></a> 
+                        <a href="{% url 'membership:form2_end_term' %}" class="btn btn-info"><strong>END TERM EXAM</strong></a> 
+                    </div>
+                    </div>
+                    <div class="well">
+                        <p>
+                        <span class="p-color">
+                            <strong>FORM THREE</strong> 
+                        </span>
+                        </p>
+                    <div class="text-center">
+                        <a href="{% url 'membership:form3_cat1' %}" class="btn btn-info"><strong>CAT1</strong></a> 
+                        <a href="{% url 'membership:form3_cat2' %}" class="btn btn-info"><strong>CAT2</strong></a> 
+                        <a href="{% url 'membership:form3_cat3' %}" class="btn btn-info"><strong>CAT3</strong></a> 
+                        <a href="{% url 'membership:form3_end_term' %}" class="btn btn-info"><strong>END TERM EXAM</strong></a> 
+                    </div>
+                    </div>
+                    <div class="well">
+                        <p>
+                        <span class="p-color">
+                            <strong>FORM FOUR</strong> 
+                        </span>
+                        </p>
+                    <div class="text-center">
+                        <a href="{% url 'membership:form4_mock1' %}" class="btn btn-info"><strong>MOCK1</strong></a> 
+                        <a href="{% url 'membership:form4_mock2' %}" class="btn btn-info"><strong>MOCK2</strong></a> 
+                        <a href="{% url 'membership:form4_mock3' %}" class="btn btn-info"><strong>MOCK3</strong></a> 
+                        <a href="{% url 'membership:form4_revision' %}" class="btn btn-info"><strong>REVISION</strong></a> 
+                    </div>
+                    </div>
+                <span class="p-color">
+            <strong> <p>PREMIUM NUGGETS OF ACADEMIC EXCELLENCE</p> </strong>
+                </span>
+                <div class="p-color">
+                    {% for item in premium_study_tips %}
+    {% if item.tip1 and item.tip1_file %}
+                    <p> <a href="{{ item.tip1_file.url }}"><strong>{{ item.tip1 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip2 and item.tip2_file %}
+                    <p> <a href="{{ item.tip2_file.url }}"><strong>{{ item.tip2 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip3 and item.tip3_file %}
+                    <p> <a href="{{ item.tip3_file.url }}"><strong>{{ item.tip3 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip4 and item.tip4_file %}
+                    <p> <a href="{{ item.tip4_file.url }}"><strong>{{ item.tip4 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip5 and item.tip5_file %}
+                    <p> <a href="{{ item.tip5_file.url }}"><strong>{{ item.tip5 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip6 and item.tip6_file %}
+                    <p> <a href="{{ item.tip6_file.url }}"><strong>{{ item.tip6 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip7 and item.tip7_file %}
+                    <p> <a href="{{ item.tip7_file.url }}"><strong>{{ item.tip7 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip8 and item.tip8_file %}
+                    <p> <a href="{{ item.tip8_file.url }}"><strong>{{ item.tip8 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip9 and item.tip9_file %}
+                    <p> <a href="{{ item.tip9_file.url }}"><strong>{{ item.tip9 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip10 and item.tip10_file %}
+                    <p> <a href="{{ item.tip10_file.url }}"><strong>{{ item.tip10 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip11 and item.tip11_file %}
+                    <p> <a href="{{ item.tip11_file.url }}"><strong>{{ item.tip11 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip12 and item.tip12_file %}
+                    <p> <a href="{{ item.tip12_file.url }}"><strong>{{ item.tip12 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip13 and item.tip13_file %}
+                    <p> <a href="{{ item.tip13_file.url }}"><strong>{{ item.tip13 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip14 and item.tip14_file %}
+                    <p> <a href="{{ item.tip14_file.url }}"><strong>{{ item.tip14 }}</strong></a> </p>
+	  {% endif %}
+    {% if item.tip15 and item.tip15_file %}
+                    <p> <a href="{{ item.tip15_file.url }}"><strong>{{ item.tip15 }}</strong></a> </p>
+	  {% endif %}
+                    {% endfor %}
+                </div>
+                </div>
+                {% else %}
+                <span class="p-color text-center">
+            <strong> <p>Upgrade to premium membership to access more exams and answers.<p><a href="{% url 'membership:premium_membership' %}" class="btn btn-success"><strong>Upgrade</strong></a></p></p> </strong>
+                </span>
+                {% endif %}
+        </div>
       </div>
     </div>
   </div>
