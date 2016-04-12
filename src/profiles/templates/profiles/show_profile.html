@@ -44,7 +44,7 @@
 	  {% endif %}
 	</li>
         <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span> {{ show_user.date_joined }}</li>
-        <li class="list-group-item text-right"><span class="pull-left"><strong>Last seen</strong></span> {{ show_user.last_login }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Last seen</strong></span> {{ show_user.last_login|timesince }}&nbsp;ago.</li>
       </ul>
 
 	  {% if show_user.profile.career1 %}
@@ -255,6 +255,12 @@
                 </span>
                 {% endif %}
         </div>
+                <span class="p-color text-center">
+            <strong> <p>Click here to leave a comment or suggestion</p>
+                <h3>
+            </strong><p><a href="{% url 'contact:home' %}" class="label label-warning btn-success"><strong>Comment Here</strong></a></p>
+                </h3>
+                </span>
       </div>
     </div>
   </div>
