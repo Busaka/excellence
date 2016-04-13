@@ -140,7 +140,7 @@
                 <br />
                 {% if show_user.profile.status == 'premium' %}
                 <span class="p-color text-center">
-            <strong> <p> PREMIUM REVISION RESOURCES </p> </strong>
+            <strong> <p> PREMIUM SCHOOL EXAMINATIONS </p> </strong>
                 </span>
 
                 <div class="text-center">
@@ -197,7 +197,7 @@
                     </div>
                     </div>
                 <span class="p-color">
-            <strong> <p>PREMIUM NUGGETS OF ACADEMIC EXCELLENCE</p> </strong>
+            <strong> <p>TEACHING AND LEARNING RESOURCES</p> </strong>
                 </span>
                 <div class="p-color">
                     {% for item in premium_study_tips %}
@@ -241,25 +241,23 @@
                     <p> <a href="{{ item.tip13_file.url }}"><strong>{{ item.tip13 }}</strong></a> </p>
 	  {% endif %}
     {% if item.tip14 and item.tip14_file %}
-                    <p> <a href="{{ item.tip14_file.url }}"><strong>{{ item.tip14 }}</strong></a> </p>
-	  {% endif %}
-    {% if item.tip15 and item.tip15_file %}
-                    <p> <a href="{{ item.tip15_file.url }}"><strong>{{ item.tip15 }}</strong></a> </p>
-	  {% endif %}
-                    {% endfor %}
-                </div>
-                </div>
-                {% else %}
-                <span class="p-color text-center">
+                    <p> <a href="{{ item.tip14_file.url }}"><strong>{{ item.tip14 }}</strong></a> </p> {% endif %} {% if item.tip15 and item.tip15_file %} <p> <a href="{{ item.tip15_file.url }}"><strong>{{ item.tip15 }}</strong></a> </p> {% endif %} {% endfor %} </div> </div> 
+
+    {% else %}
+
+    <h4>
+        <span class="p-color text-center">
             <strong> <p>Upgrade to premium membership to access more exams and answers.<p><a href="{% url 'membership:premium_membership' %}" class="btn btn-success"><strong>Upgrade</strong></a></p></p> </strong>
-                </span>
-                {% endif %}
+        </span>
+    </h4>
+
+    {% endif %}
+
         </div>
                 <span class="p-color text-center">
-            <strong> <p>Click here to leave a comment or suggestion</p>
-                <h3>
-            </strong><p><a href="{% url 'contact:home' %}" class="label label-warning btn-success"><strong>Comment Here</strong></a></p>
-                </h3>
+                                <h4> </strong><p>To leave us a comment, compliment, question or advice,
+<a href="{% url 'contact:home' %}"><strong>Click Here</strong></a></p>
+                </h4>
                 </span>
       </div>
     </div>
