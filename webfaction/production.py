@@ -32,8 +32,8 @@ TEMPLATES[0]['OPTIONS'].update({"loaders": loaders})
 TEMPLATES[0].update({"APP_DIRS": False})
 
 # Define STATIC_ROOT for the collectstatic command
-STATIC_ROOT = '/home/lxbusaka/webapps/excellence_static'
-MEDIA_ROOT =  '/home/lxbusaka/webapps/excell_media'
+STATIC_ROOT = '/home/eslpress/webapps/esm_static'
+MEDIA_ROOT =  '/home/eslpress/webapps/esm_media'
 # Log everything to the logs directory at the top
 LOGFILE_ROOT = join(dirname(BASE_DIR), 'logs')
 

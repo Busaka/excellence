@@ -15,7 +15,7 @@ BASE_DIR = dirname(dirname(dirname(__file__)))
 STATICFILES_DIRS = [join(BASE_DIR, 'static')]
 MEDIA_URL = "/media/"
 
-MEDIA_ROOT =  '/home/lxbusaka/webapps/excell_media'
+MEDIA_ROOT =  '/home/eslpress/webapps/esm_media'
 # Use Django templates using the new Django 1.8 TEMPLATES settings
 TEMPLATES = [
     {
@@ -146,15 +146,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/lxbusaka/webapps/excellence_static'
+STATIC_ROOT = '/home/eslpress/webapps/esm_static'
 
-
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'xapian_backend.XapianEngine',
-        'PATH': os.path.join(os.path.dirname(__file__), 'xapian_index')
-    },
-}
 
 # Crispy Form Theme - Bootstrap 3
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
