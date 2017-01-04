@@ -8,16 +8,21 @@ DEBUG = False
 TEMPLATE_DEBUG = False
 
 # Must mention ALLOWED_HOSTS in production!
+# ALLOWED_HOSTS = [
+#         "http://www.excellencestudentmagazine.com",
+#         "http://excellencesudentmagazine.com",
+#         "www.excellencestudentmagazine.com",
+#         "excellencestudentmagazine.com",
+#         ]
+
 ALLOWED_HOSTS = [
-        "http://www.excellencestudentmagazine.com",
-        "http://excellencesudentmagazine.com",
-        "www.excellencestudentmagazine.com",
-        "excellencestudentmagazine.com",
+        "eslpress.webfactional.com",
         ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-DATABASE_URL=postgres://lxbusaka:majestic12jeff@lxbusaka.webfactional.com:5432/excellence_db
+DATABASE_URL=postgres://esm_user:majestic12jeff@eslpress.webfactional.com:5432/esm_db
+
 # Cache the templates in memory for speed-up
 loaders = [
     ('django.template.loaders.cached.Loader', [
