@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% load crispy_forms_tags %}
 {% block title %}{{ block.super }}{{ international_uni_details }}{% endblock %}
 
 {% block content %}
@@ -8,7 +7,7 @@
 <div class="text-center">
     <h3><span class="label label-default">{{ international_uni_details }}</span></h3>
     {% if international_uni_details.university_logo %}
-    <img class="" src="{{ international_uni_details.university_logo.url }}" height=100px width=100px alt="20x20">
+    <img class="" src="{{ international_uni_details.university_logo.url }}" height=250px width=250px alt="20x20">
     {% endif %}
 </div>
 
